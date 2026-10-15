@@ -14,6 +14,8 @@ interface ProductCard3DProps {
   imageAlt?: string;
   href?: string;
   className?: string;
+  imageHeight?: string;
+  variant?: 'default' | 'full-bleed';
   delay?: number;
 }
 
@@ -25,10 +27,65 @@ export function ProductCard3D({
   imageAlt,
   href,
   className,
+  imageHeight = 'h-48 sm:h-56 md:h-64 lg:h-72',
+  variant = 'default',
   delay = 0,
 }: ProductCard3DProps) {
   const [imageError, setImageError] = useState(false);
 
+  // ── Full-bleed variant: image covers entire card, title overlaid at bottom ──
+  if (variant === 'full-bleed') {
+    const bleedContent = (
+      <div
+        className={cn(
+          'group relative aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1',
+          className
+        )}
+        data-card="true"
+      >
+        {!imageError ? (
+          <Image
+            src={image}
+            alt={imageAlt || title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+            <span className="text-gray-500 text-sm font-medium">{title}</span>
+          </div>
+        )}
+
+        {/* Gradient overlay — always visible at bottom */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent pt-10 pb-4 px-4">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold text-white leading-tight">
+            {title}
+          </h3>
+          {href && (
+            <span className="inline-block mt-1.5 text-xs text-amber-300 font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              View Products →
+            </span>
+          )}
+        </div>
+
+        {/* Amber border on hover */}
+        <div className="absolute inset-0 border-2 border-amber-500/0 group-hover:border-amber-500/60 rounded-xl transition-all duration-500 pointer-events-none" />
+      </div>
+    );
+
+    if (href) {
+      return (
+        <Link href={href} className="block">
+          {bleedContent}
+        </Link>
+      );
+    }
+    return bleedContent;
+  }
+
+  // ── Default variant ────────────────────────────────────────────────────────
   const cardContent = (
     <div
       className={cn(
@@ -39,7 +96,7 @@ export function ProductCard3D({
       data-card="true"
     >
       {/* Image Container */}
-      <div className="product-image relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gray-50 dark:bg-gray-700/50 overflow-hidden">
+      <div className={cn('product-image relative bg-gray-50 dark:bg-gray-700/50 overflow-hidden', imageHeight)}>
         {!imageError && (
           <div className="absolute inset-x-0 inset-y-2 sm:inset-y-3 md:inset-y-4">
             <Image
