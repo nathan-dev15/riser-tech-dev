@@ -58,13 +58,34 @@ export function ProductCard3D({
           </div>
         )}
 
-        {/* Gradient overlay — always visible at bottom */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent pt-10 pb-4 px-4">
-          <h3 className="text-sm sm:text-base md:text-lg font-bold text-white leading-tight">
+        {/* Title strip — always visible */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pb-3 pt-8 px-3 text-center">
+          <h3 className="text-xs sm:text-sm md:text-base font-bold text-white leading-tight">
             {title}
           </h3>
+        </div>
+
+        {/* Hover overlay — description slides up */}
+        <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center p-3 sm:p-4 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out">
+          <h3 className="text-xs sm:text-sm md:text-base font-bold text-white leading-tight mb-1.5">
+            {title}
+          </h3>
+          {description.includes('•') ? (
+            <ul className="inline-block text-left mx-auto space-y-0.5 mt-0.5">
+              {description.split('•').map((item) => item.trim()).filter(Boolean).map((item, i) => (
+                <li key={i} className="flex items-start gap-1 text-white/80 text-[10px] sm:text-xs leading-snug">
+                  <span className="text-amber-400 mt-px shrink-0">·</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-white/80 text-[10px] sm:text-xs leading-snug text-center">
+              {description}
+            </p>
+          )}
           {href && (
-            <span className="inline-block mt-1.5 text-xs text-amber-300 font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+            <span className="inline-block mt-2 text-[10px] sm:text-xs text-amber-300 font-semibold">
               View Products →
             </span>
           )}
