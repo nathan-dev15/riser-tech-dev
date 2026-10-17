@@ -10,9 +10,9 @@ import Image from 'next/image';
 const heroSlides = [
   {
     id: 1,
-    title: 'Safety is not just a priority,',
-    subtitle: "it's a Responsibility",
-    description: 'Delivering Reliable Fire Safety Systems for a Safer Tomorrow.',
+    title: 'Fire Sprinkler Systems',
+    subtitle: 'Chennai • Tamil Nadu • India',
+    description: 'Trusted sprinkler system supplier in Chennai — UL Listed, FM Approved Reliable Fire Sprinklers. Expert design, installation & maintenance across Tamil Nadu and India.',
     image: '/images/hero/hero-1.jpg',
     gradient: 'from-slate-900 via-slate-800 to-amber-900',
     overlay: 'rgba(0, 0, 0, 0.4)',

@@ -168,10 +168,10 @@ export function ReliableIndia() {
             magnify={2.5}
           >
             <span className="text-gray-900 dark:text-white">
-              Reliable Sprinkler Systems for
+              Trusted Sprinkler System Supplier in
             </span>{' '}
             <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
-              India's Industrial Future
+              Chennai, Tamil Nadu & India
             </span>
           </LensHeading>
 
@@ -183,9 +183,9 @@ export function ReliableIndia() {
             viewport={{ once: true }}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed px-2"
           >
-            As India's authorised distribution partner for Reliable Automatic Sprinkler Co. USA, Riser Technologies
+            Chennai-based authorised distributor of Reliable Fire Sprinklers (USA) — Riser Technologies
             supplies UL Listed, FM Approved, and LPCB Certified fire sprinkler systems, valves, and
-            pre-action systems — engineered for India's warehouses, data centres, EV plants, and
+            pre-action systems across Tamil Nadu and India — engineered for warehouses, data centres, EV plants, and
             commercial buildings.
           </motion.p>
         </motion.div>

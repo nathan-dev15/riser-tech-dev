@@ -68,6 +68,7 @@ export function LocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: COMPANY_INFO.name,
+    description: 'Chennai-based fire sprinkler system supplier and installer. Authorised Indian distributor of Reliable Fire Sprinklers (USA). UL/FM/LPCB certified fire protection systems for warehouses, data centres, and commercial buildings across Tamil Nadu and India.',
     image: `${baseUrl}/logo.png`,
     '@id': baseUrl,
     url: baseUrl,
@@ -92,10 +93,24 @@ export function LocalBusinessSchema() {
       opens: '08:00',
       closes: '18:00',
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Chennai',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Chennai' },
+      { '@type': 'State', name: 'Tamil Nadu' },
+      { '@type': 'Country', name: 'India' },
+    ],
+    knowsAbout: [
+      'Fire Sprinkler Systems',
+      'Sprinkler Systems in Chennai',
+      'ESFR Sprinklers',
+      'Pre-Action Fire Systems',
+      'Kitchen Fire Suppression',
+      'Gas Suppression Systems',
+      'UL Listed FM Approved Sprinklers',
+      'Reliable Fire Sprinklers',
+    ],
+    sameAs: [
+      'https://www.reliablesprinkler.com/products/sprinklers/',
+    ],
   };
 
   return <StructuredData data={schema} />;

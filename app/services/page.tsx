@@ -1,4 +1,19 @@
+import { Metadata } from 'next';
 import { SERVICES } from '@/lib/constants';
+
+export const metadata: Metadata = {
+  title: 'Fire Sprinkler Installation Services Chennai | Tamil Nadu India — Riser Technologies',
+  description: 'Professional fire sprinkler installation, maintenance & inspection services in Chennai, Tamil Nadu & across India. NFPA 13 compliant design, UL/FM approved systems. Call +91 9787666104.',
+  keywords: [
+    'fire sprinkler installation chennai',
+    'sprinkler system service tamilnadu',
+    'fire safety services india',
+    'fire sprinkler maintenance chennai',
+    'sprinkler contractor chennai',
+    'fire protection services tamil nadu',
+    'fire system inspection india',
+  ],
+};
 import { Card } from '@/components/ui/Card';
 import { Button3D } from '@/components/ui/Button3D';
 import { Bell, Lightbulb, Shield, Droplet, TrendingUp, CheckCircle } from 'lucide-react';

@@ -12,17 +12,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Riser Technologies | Fire Protection Systems — Chennai, Tamil Nadu, India',
-    template: '%s | Riser Technologies — Reliable Sprinkler Distributor India',
+    default: 'Sprinkler Systems in Chennai | Fire Sprinkler Tamil Nadu India | Riser Technologies',
+    template: '%s | Sprinkler Systems Chennai — Riser Technologies',
   },
   description:
-    'Authorised Indian distributor of Reliable Sprinkler Co. USA. UL/FM/LPCB certified fire sprinkler systems, ESFR, DDX pre-action & LB11 Li-ion sprinklers. Chennai. Call 9787666104.',
+    'Top sprinkler system supplier in Chennai, Tamil Nadu & India. Authorised distributor of Reliable Fire Sprinklers (USA). UL/FM/LPCB certified — ESFR, DDX pre-action, kitchen suppression. Call +91 9787666104.',
   keywords: [
-    // General
+    // General — location-first for ranking
     'sprinkler',
     'sprinkler in chennai',
     'sprinkler in tamilnadu',
     'sprinkler in india',
+    'sprinkler system in chennai',
+    'sprinkler system in tamilnadu',
+    'sprinkler system in india',
+    'fire sprinkler in chennai',
+    'fire sprinkler in tamilnadu',
+    'fire sprinkler in india',
+    'sprinkler supplier in chennai',
+    'sprinkler dealer in chennai',
+    'sprinkler company in chennai',
+    'sprinkler installation chennai',
+    'sprinkler contractor chennai',
+    'fire sprinkler supplier india',
     'fire and safety',
     'fire systems',
     'fire sprinklers',
@@ -65,6 +77,8 @@ export const metadata: Metadata = {
     // Generic high-intent
     'fire sprinkler systems india',
     'ESFR sprinklers india',
+    'UL Listed FM Approved fire sprinklers',
+    'UL Listed FM Approved sprinklers and accessories',
     'UL FM approved sprinklers india',
     'commercial fire protection equipment india',
     'pre-action fire suppression system india',
@@ -93,9 +107,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     siteName: 'Riser Technologies — Reliable Sprinkler Distributor India',
-    title: 'Reliable Sprinkler India | UL/FM Fire Sprinkler Systems — Riser Technologies',
+    title: 'Sprinkler Systems Chennai | UL/FM Fire Sprinklers Tamil Nadu India — Riser Technologies',
     description:
-      'Authorised Indian distributor of Reliable Sprinkler Co. USA. UL/FM/LPCB certified fire sprinkler systems, ESFR storage, DDX pre-action & LB11 Li-ion sprinklers. Chennai.',
+      'Authorised Indian distributor of Reliable Fire Sprinklers (USA). UL/FM/LPCB certified fire sprinkler systems, ESFR storage, DDX pre-action & LB11 Li-ion sprinklers. Chennai.',
     images: [
       {
         url: '/og-image.jpg',
@@ -107,7 +121,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Reliable Sprinkler India | UL/FM Fire Systems — Riser Technologies',
+    title: 'Sprinkler Systems Chennai | UL/FM Fire Sprinklers Tamil Nadu India — Riser Technologies',
     description: 'Expert fire safety solutions in Chennai. Fire alarms, extinguishers, emergency lighting & more.',
     images: ['/twitter-image.jpg'],
   },

@@ -11,12 +11,12 @@ const faqs = [
   {
     question: 'Is Riser Technologies an authorised distributor of Reliable Sprinkler in India?',
     answer:
-      'Yes. Riser Technologies is an authorised Indian distribution partner for Reliable Automatic Sprinkler Co., USA — one of the world\'s leading manufacturers of UL Listed and FM Approved fire sprinkler systems. We supply genuine Reliable Sprinkler products including sprinkler heads, system valves, grooved connections, and pre-action systems across India from our base in Chennai, Tamil Nadu.',
+      'Yes. Riser Technologies is an authorised Indian distribution partner for Reliable Fire Sprinklers (USA) — one of the world\'s leading manufacturers of UL Listed and FM Approved fire sprinkler systems. We supply genuine Reliable Fire Sprinklers products including sprinkler heads, system valves, grooved connections, and pre-action systems across India from our base in Chennai, Tamil Nadu.',
   },
   {
     question: 'What Reliable Sprinkler products does Riser Technologies supply in India?',
     answer:
-      'Riser Technologies supplies the complete Reliable Sprinkler product portfolio in India: fire sprinkler heads (Quick Response, Standard Response, ESFR, residential), system valves (alarm check valves, deluge, dry-pipe, pre-action), grooved pipe connections (couplings, fittings, flanges), general purpose valves (OS&Y gate, butterfly, check), and the LB11 lithium-ion battery storage sprinkler. All products are UL Listed and/or FM Approved.',
+      'Riser Technologies supplies the complete Reliable Fire Sprinklers product portfolio in India: fire sprinkler heads (Quick Response, Standard Response, ESFR, residential), system valves (alarm check valves, deluge, dry-pipe, pre-action), grooved pipe connections (couplings, fittings, flanges), general purpose valves (OS&Y gate, butterfly, check), and the LB11 lithium-ion battery storage sprinkler. All products are UL Listed and/or FM Approved. Full product range: https://www.reliablesprinkler.com/products/sprinklers/',
   },
   {
     question: 'What is an ESFR sprinkler and do I need it for my warehouse in India?',
