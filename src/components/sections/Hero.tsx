@@ -13,7 +13,7 @@ const heroSlides = [
     title: 'Safety is not just a priority,',
     subtitle: "it's a Responsibility",
     description: 'Delivering Reliable Fire Safety Systems for a Safer Tomorrow.',
-    image: '/images/hero/hero-1.png',
+    image: '/images/hero/hero-1.jpg',
     gradient: 'from-slate-900 via-slate-800 to-amber-900',
     overlay: 'rgba(0, 0, 0, 0.4)',
   },
@@ -47,14 +47,24 @@ const heroSlides = [
   {
     id: 5,
     title: 'TUBE BASED SUPPRESSION SYSTEM',
-    subtitle: "Ceasefire's Quick Response System",
-    description: 'Ceasefire Quick Response System for rapid fire detection and suppression. Advanced technology for fast response times. Reliable fire safety solution for commercial and industrial properties in Chennai.',
+    subtitle: "",
+    description: 'Quick Response System for rapid fire detection and suppression. Advanced technology for fast response times. Reliable fire safety solution for commercial and industrial properties in Chennai.',
     image: '/images/hero/hero-9.png',
     gradient: 'from-green-900 via-emerald-900 to-teal-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
   },
   {
-    id: 6,
+  id: 6, // Adjusted ID for sequence
+  title: 'ADVANCED PREACTION CABINET',
+  subtitle: 'RELIABLE FIRE SYSTEMS',
+  description: 'Integrated preaction system featuring advanced single or double interlock control mechanisms. Factory assembled and pressure tested for seamless installation. Ultimate protection for high-value commercial and industrial assets in Chennai.',
+  image: '/images/hero/preaction-cabinet.jpg', 
+  gradient: 'from-red-900 via-rose-950 to-neutral-900',
+  overlay: 'rgba(0, 0, 0, 0.55)',
+},
+
+  {
+    id: 7,
     title: 'Fire Protection System',
     subtitle: 'Advanced Solutions',
     description: 'Comprehensive fire protection systems with cutting-edge technology. From detection to suppression, we provide complete fire safety solutions for your business.',
@@ -63,7 +73,7 @@ const heroSlides = [
     overlay: 'rgba(0, 0, 0, 0.5)',
   },
   {
-    id: 7,
+    id: 8,
     title: 'SUPPRESSION SYSTEMS',
     subtitle: 'Advanced Fire Suppression',
     description: 'State-of-the-art fire suppression systems designed to quickly extinguish fires and protect your property. Professional installation and maintenance services available in Chennai.',
@@ -71,18 +81,8 @@ const heroSlides = [
     gradient: 'from-amber-900 via-red-900 to-orange-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
   },
-  // {
-  //   id: 6,
-  //   title: 'GasSuppressionSystem',
-  //   subtitle: '',
-  //   description: 'Clean agent fire suppression for critical areas. Fast-acting protection without water damage. Ideal for server rooms, data centers, and sensitive equipment. Zero residue, safe for electronics. Expert installation and maintenance in Chennai.',
-  //   image: '/images/hero/hero-6.jpg',
-  //   gradient: 'from-blue-900 via-indigo-900 to-purple-900',
-  //   overlay: 'rgba(0, 0, 0, 0.5)',
-  // },
-
   {
-    id: 8,
+    id: 9,
     title: 'KITCHEN FIRE SUPPRESSION',
     subtitle: 'LPCB Certified Commercial Kitchen Suppression System (Wet Chemical Based)',
     description: 'LPCB certified wet chemical kitchen fire suppression system. Automatic detection and suppression for commercial kitchens in Chennai. Professional installation and maintenance for restaurants and hotels.',
@@ -92,7 +92,7 @@ const heroSlides = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: 'ALARM SOLUTIONS',
     subtitle: 'Fire alarm system',
     description: 'Professional fire alarm system installation in Chennai. Addressable and conventional fire alarm systems. Smoke detectors, heat detectors, and manual call points. 24/7 monitoring and maintenance.  Expert fire alarm installation services for commercial and residential properties.',
@@ -101,11 +101,11 @@ const heroSlides = [
     overlay: 'rgba(0, 0, 0, 0.5)',
   },
     {
-    id: 10,
+    id: 11,
     title: 'Certified Experts',
     subtitle: 'Trusted Solutions',
     description: 'Over 12 years of experience in fire safety. Certified professionals ready to protect what matters most to you.',
-    image: '/images/hero/hero-3.png',
+    image: '/images/slide/certified-experts.jpg',
     gradient: 'from-slate-800 via-amber-800 to-yellow-800',
     overlay: 'rgba(0, 0, 0, 0.5)',
   },
@@ -120,55 +120,36 @@ const stats = [
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [progress, setProgress] = useState(0);
   const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (!isAutoPlaying || isHovered) {
-      setProgress(0);
-      return;
-    }
+    if (!isAutoPlaying || isHovered) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      setProgress(0);
     }, 6000);
 
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 0;
-        return prev + (100 / 60); // 60 updates per 6 seconds
-      });
-    }, 100);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(progressInterval);
-    };
+    return () => clearInterval(interval);
   }, [isAutoPlaying, isHovered]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
-    setProgress(0);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
-    setProgress(0);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-    setProgress(0);
   };
 
   const toggleAutoPlay = () => {
     setIsAutoPlaying(!isAutoPlaying);
-    setProgress(0);
   };
 
   const currentSlideData = heroSlides[currentSlide];
@@ -184,19 +165,22 @@ export function Hero() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <style>{`@keyframes heroProgress { from { width: 0% } to { width: 100% } }`}</style>
       {/* Background Slides with Clean Crossfade Animation */}
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => {
           const hasImageError = imageErrors[slide.id];
           const isActive = index === currentSlide;
-          
+          const isNext = index === (currentSlide + 1) % heroSlides.length;
+          const shouldMountImage = isActive || isNext;
+
           return (
             <motion.div
               key={slide.id}
               animate={{
                 opacity: isActive ? 1 : 0,
               }}
-              transition={{ 
+              transition={{
                 duration: 1,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
@@ -206,16 +190,16 @@ export function Hero() {
                 willChange: 'opacity',
               }}
             >
-              {/* Background Image */}
-              {!hasImageError && (
-                <motion.div 
+              {/* Background Image — only current + next to avoid loading all 11 at once */}
+              {!hasImageError && shouldMountImage && (
+                <motion.div
                   className="absolute inset-0"
                   initial={false}
                   animate={{
-                    scale: isActive ? [1.2, 1] : 1.05,
+                    scale: isActive ? [1.1, 1] : 1.05,
                   }}
                   transition={{
-                    duration: isActive ? 8 : 1,
+                    duration: isActive ? 5 : 1,
                     ease: 'linear',
                   }}
                 >
@@ -224,14 +208,13 @@ export function Hero() {
                     alt={slide.title}
                     fill
                     className="object-cover"
-                    priority={index === 0 || slide.id === 5 || slide.id === 9}
+                    priority={index === 0}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                     onError={() => {
                       console.warn(`Failed to load image for slide ${slide.id}: ${slide.image}`);
                       handleImageError(slide.id);
                     }}
                     onLoad={() => {
-                      // Clear error state if image loads successfully
                       setImageErrors(prev => {
                         const newErrors = { ...prev };
                         delete newErrors[slide.id];
@@ -437,11 +420,13 @@ export function Hero() {
       <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
         {/* Progress Bar */}
         <div className="w-24 sm:w-28 md:w-32 h-0.5 sm:h-1 bg-white/20 rounded-full overflow-hidden backdrop-blur-sm">
-          <motion.div
+          <div
+            key={`progress-${currentSlide}-${isAutoPlaying}`}
             className="h-full bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1, ease: 'linear' }}
+            style={{
+              animation: isAutoPlaying && !isHovered ? 'heroProgress 6s linear forwards' : 'none',
+              width: isAutoPlaying && !isHovered ? undefined : '0%',
+            }}
           />
         </div>
 

@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/about/about-image-3-page.jpg"
-            alt="About RiserTech Background"
+            alt="About Riser Technologies Background"
             fill
             className="object-cover"
             priority
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
-                At RiserTech, we are dedicated to protecting lives and property through innovative fire safety solutions.
+                At Riser Technologies, we are dedicated to protecting lives and property through innovative fire safety solutions.
                 Our mission is to provide reliable, efficient, and compliant fire protection systems that give our
                 clients peace of mind.
               </p>

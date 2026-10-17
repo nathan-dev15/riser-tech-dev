@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     }
 
     return {
-      title: `${category.name} in Chennai | Fire Safety Products - RiserTech`,
+      title: `${category.name} in Chennai | Fire Safety Products - Riser Technologies`,
       description: `${category.description} Available in Chennai, Tamil Nadu. Expert installation and support. Browse our complete range of ${category.name.toLowerCase()}.`,
       keywords: [
         `${category.name.toLowerCase()} Chennai`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         `best ${category.name.toLowerCase()} supplier Chennai`,
       ],
       openGraph: {
-        title: `${category.name} in Chennai | RiserTech`,
+        title: `${category.name} in Chennai | Riser Technologies`,
         description: `${category.description} Available in Chennai. Expert installation and support.`,
         url: `${baseUrl}/products/${category.slug}`,
         type: 'website',
@@ -57,13 +57,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
             url: `${baseUrl}/images/products/${category.slug}/category.jpg`,
             width: 1200,
             height: 630,
-            alt: `${category.name} - RiserTech Chennai`,
+            alt: `${category.name} - Riser Technologies Chennai`,
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${category.name} in Chennai | RiserTech`,
+        title: `${category.name} in Chennai | Riser Technologies`,
         description: `${category.description} Available in Chennai.`,
       },
       alternates: {
@@ -83,8 +83,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       };
     }
 
-    const productTitle = `${product.title} in Chennai | ${product.category} - RiserTech`;
-    const productDescription = `${product.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech. ${product.features.slice(0, 3).join('. ')}.`;
+    const productTitle = `${product.title} in Chennai | ${product.category} - Riser Technologies`;
+    const productDescription = `${product.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies. ${product.features.slice(0, 3).join('. ')}.`;
 
     return {
       title: productTitle,
@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         `price ${product.title.toLowerCase()} Chennai`,
       ],
       openGraph: {
-        title: `${product.title} in Chennai | RiserTech`,
+        title: `${product.title} in Chennai | Riser Technologies`,
         description: productDescription,
         url: `${baseUrl}/products/${category.slug}/${product.id}`,
         type: 'website',
@@ -108,13 +108,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
             url: `${baseUrl}/images/products/${category.slug}/${product.id}.jpg`,
             width: 1200,
             height: 630,
-            alt: `${product.title} - RiserTech Chennai`,
+            alt: `${product.title} - Riser Technologies Chennai`,
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${product.title} in Chennai | RiserTech`,
+        title: `${product.title} in Chennai | Riser Technologies`,
         description: productDescription,
       },
       alternates: {
@@ -124,7 +124,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 
   return {
-    title: 'Products - RiserTech',
+    title: 'Products - Riser Technologies',
   };
 }
 
@@ -187,7 +187,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   {category.name} in Chennai
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed">
-                  {category.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech.
+                  {category.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies.
                 </p>
               </div>
             </div>
@@ -317,7 +317,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   {product.title} in Chennai
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed">
-                  {product.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech.
+                  {product.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies.
                 </p>
               </div>
             </div>
@@ -330,7 +330,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             {/* SEO Content Section */}
             <div className="mb-6 sm:mb-8 text-gray-700 dark:text-gray-300">
               <p className="text-base sm:text-lg leading-relaxed mb-4">
-                Looking for <strong>{product.title}</strong> in Chennai? RiserTech offers premium quality {product.category.toLowerCase()} 
+                Looking for <strong>{product.title}</strong> in Chennai? Riser Technologies offers premium quality {product.category.toLowerCase()} 
                 with expert installation and comprehensive support. Our {product.title.toLowerCase()} are ideal for commercial, 
                 industrial, and residential applications in Chennai and across Tamil Nadu.
               </p>

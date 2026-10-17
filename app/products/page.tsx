@@ -287,13 +287,13 @@ export default function ProductsPage() {
                 </p>
               </div>
               <p className="text-white/90 leading-relaxed text-xs md:text-sm lg:text-base">
-                At RiserTech, we are driven by a singular purpose — to build a safer planet for everyone.
+                At Riser Technologies, we are driven by a singular purpose — to build a safer planet for everyone.
                 In the battle against fire, there are no second chances. Every second counts, and every product we design is built with that responsibility in mind.
 
                 Through relentless innovation, advanced engineering, and uncompromising quality, we create life-saving fire protection systems that perform flawlessly when it matters most.
                 Our commitment goes beyond technology — it's about protecting people, their communities, and their livelihoods.
 
-                At RiserTech, safety isn't just our business — it's our promise to the world.
+                At Riser Technologies, safety isn't just our business — it's our promise to the world.
               </p>
             </motion.div>
           </div>

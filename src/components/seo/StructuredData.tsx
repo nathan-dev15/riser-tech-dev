@@ -113,7 +113,7 @@ export function ProductSchema({ product, category }: { product: Product; categor
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `${product.title} - ${product.category} in Chennai`,
-    description: `${product.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech.`,
+    description: `${product.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies.`,
     image: `${baseUrl}/images/products/${category.slug}/${product.id}.jpg`,
     sku: product.id,
     category: product.category,
@@ -187,7 +187,7 @@ export function ServiceSchema({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: `${name} in Chennai`,
-    description: `${description} Available in Chennai, Tamil Nadu. Expert service by RiserTech.`,
+    description: `${description} Available in Chennai, Tamil Nadu. Expert service by Riser Technologies.`,
     provider: {
       '@type': 'LocalBusiness',
       name: COMPANY_INFO.name,

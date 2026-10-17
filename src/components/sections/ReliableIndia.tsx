@@ -183,7 +183,7 @@ export function ReliableIndia() {
             viewport={{ once: true }}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed px-2"
           >
-            As India's authorised distribution partner for Reliable Automatic Sprinkler Co. USA, RiserTech
+            As India's authorised distribution partner for Reliable Automatic Sprinkler Co. USA, Riser Technologies
             supplies UL Listed, FM Approved, and LPCB Certified fire sprinkler systems, valves, and
             pre-action systems — engineered for India's warehouses, data centres, EV plants, and
             commercial buildings.
@@ -376,7 +376,7 @@ export function ReliableIndia() {
           viewport={{ once: true }}
           className="mt-8 sm:mt-10 text-center text-xs text-gray-400 dark:text-gray-600 max-w-4xl mx-auto leading-relaxed px-4"
         >
-          RiserTech is an authorised Indian distributor of Reliable Automatic Sprinkler Co. fire
+          Riser Technologies is an authorised Indian distributor of Reliable Automatic Sprinkler Co. fire
           protection equipment — including UL/FM-approved fire sprinkler systems, ESFR storage
           sprinklers, DDX pre-action systems, alarm check valves, grooved connections, and the LB11
           lithium-ion battery storage sprinkler — serving Chennai, Bengaluru, Hyderabad, Pune, Mumbai,
