@@ -9,7 +9,7 @@ const testimonials = [
     role: 'CEO',
     company: 'D.B.A Pvt. Ltd',
     content:
-      'As a restaurant owner, fire safety is a top priority. RiserTech installed a kitchen fire suppression system that meets all regulations and gives me peace of mind during busy hours.',
+      'As a restaurant owner, fire safety is a top priority. Riser Technologies installed a kitchen fire suppression system that meets all regulations and gives me peace of mind during busy hours.',
     rating: 5,
   },
   {

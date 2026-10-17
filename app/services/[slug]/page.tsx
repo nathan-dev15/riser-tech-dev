@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const serviceTitle = `${service.title} in Chennai | Fire Safety Services - RiserTech`;
-  const serviceDescription = `${service.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech. ${service.features.slice(0, 3).join('. ')}. Call 9787666104 for a free quote.`;
+  const serviceTitle = `${service.title} in Chennai | Fire Safety Services - Riser Technologies`;
+  const serviceDescription = `${service.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies. ${service.features.slice(0, 3).join('. ')}. Call 9787666104 for a free quote.`;
 
   return {
     title: serviceTitle,
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       `fire safety services Chennai`,
     ],
     openGraph: {
-      title: `${service.title} in Chennai | RiserTech`,
+      title: `${service.title} in Chennai | Riser Technologies`,
       description: serviceDescription,
       url: `${baseUrl}/services/${service.id}`,
       type: 'website',
@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: `${baseUrl}/images/services/${service.id}.jpg`,
           width: 1200,
           height: 630,
-          alt: `${service.title} - RiserTech Chennai`,
+          alt: `${service.title} - Riser Technologies Chennai`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${service.title} in Chennai | RiserTech`,
+      title: `${service.title} in Chennai | Riser Technologies`,
       description: serviceDescription,
     },
     alternates: {
@@ -118,7 +118,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <Icon className="w-16 h-16 mb-4" />
           <h1 className="text-5xl font-bold mb-6">{service.title} in Chennai</h1>
           <p className="text-xl max-w-3xl opacity-90">
-            {service.description} Available in Chennai, Tamil Nadu. Expert installation and support by RiserTech.
+            {service.description} Available in Chennai, Tamil Nadu. Expert installation and support by Riser Technologies.
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Professional {service.title} Services in Chennai
             </h2>
             <p className="text-base sm:text-lg leading-relaxed mb-4">
-              Looking for expert <strong>{service.title}</strong> in Chennai? RiserTech provides comprehensive 
+              Looking for expert <strong>{service.title}</strong> in Chennai? Riser Technologies provides comprehensive 
               {service.title.toLowerCase()} services for commercial, industrial, and residential properties across Chennai and Tamil Nadu. 
               With over 12 years of experience, we deliver certified, reliable fire safety solutions tailored to your needs.
             </p>
@@ -141,7 +141,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               areas like T Nagar, Anna Nagar, Adyar, and across Tamil Nadu.
             </p>
             <p className="text-base sm:text-lg leading-relaxed">
-              Contact RiserTech today for a free consultation and quote. Call us at <strong>9787666104</strong> or 
+              Contact Riser Technologies today for a free consultation and quote. Call us at <strong>9787666104</strong> or 
               fill out our enquiry form to discuss your fire safety requirements.
             </p>
           </div>

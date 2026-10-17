@@ -59,7 +59,7 @@ export async function sendEnquiryEmail(data: EnquiryData): Promise<{ success: bo
         <p><strong>Message:</strong></p>
         <p>${sanitizedMessage || 'No message provided'}</p>
         <hr>
-        <p><small>Sent from RiserTech Contact Form</small></p>
+        <p><small>Sent from Riser Technologies Contact Form</small></p>
       `,
       text: `
 New Enquiry Received
@@ -72,7 +72,7 @@ Service Interest: ${sanitizedService || 'Not specified'}
 Message:
 ${sanitizedMessage || 'No message provided'}
 
-Sent from RiserTech Contact Form
+Sent from Riser Technologies Contact Form
       `,
     };
 

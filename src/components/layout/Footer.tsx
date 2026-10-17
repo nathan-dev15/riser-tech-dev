@@ -179,6 +179,12 @@ export function Footer() {
                   {COMPANY_INFO.email}
                 </a>
               </li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a href={`mailto:${COMPANY_INFO.salesEmail}`} className="hover:text-amber-400 transition-colors">
+                  {COMPANY_INFO.salesEmail}
+                </a>
+              </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1" />
                 <span className="text-sm">{COMPANY_INFO.address}</span>

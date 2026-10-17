@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { OrganizationSchema, LocalBusinessSchema } from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Fire Safety Products in Chennai | Complete Range - RiserTech',
+  title: 'Fire Safety Products in Chennai | Complete Range - Riser Technologies',
   description:
     'Browse our complete range of fire safety products in Chennai. Fire extinguishers, sprinklers, suppression systems, hydrants, alarms, and valves. Expert installation and support. 12+ years experience.',
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'best fire safety products Chennai',
   ],
   openGraph: {
-    title: 'Fire Safety Products in Chennai | RiserTech',
+    title: 'Fire Safety Products in Chennai | Riser Technologies',
     description:
       'Complete range of fire safety products in Chennai. Fire extinguishers, sprinklers, suppression systems, and more. Expert installation and support.',
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products`,

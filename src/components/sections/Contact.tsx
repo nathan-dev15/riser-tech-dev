@@ -29,8 +29,11 @@ export function Contact() {
           <Card hover className="text-center">
             <Mail className="w-12 h-12 mx-auto mb-4 text-amber-600" />
             <h3 className="text-xl font-bold mb-2">Email Us</h3>
-            <a href={`mailto:${COMPANY_INFO.email}`} className="text-amber-600 hover:underline">
+            <a href={`mailto:${COMPANY_INFO.email}`} className="text-amber-600 hover:underline block">
               {COMPANY_INFO.email}
+            </a>
+            <a href={`mailto:${COMPANY_INFO.salesEmail}`} className="text-amber-600 hover:underline block mt-1">
+              {COMPANY_INFO.salesEmail}
             </a>
           </Card>
 

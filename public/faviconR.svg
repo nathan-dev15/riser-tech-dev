@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Riser Technologies R logo</title>
+<desc id="desc">Geometric navy blue letter R with an upward arrow and orange rising accents on a transparent background.</desc>
+<defs><linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0755AC"/><stop offset="1" stop-color="#092A65"/></linearGradient><linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF9A00"/><stop offset="1" stop-color="#FF4900"/></linearGradient></defs>
+<!-- R upper bowl and diagonal leg -->
+<path fill="url(#navy)" d="M150 115H600C785 115 875 225 875 382C875 524 795 605 670 630L895 895H690L492 646L565 570C694 568 745 500 745 389C745 291 689 250 580 250H305Z"/>
+<!-- R left stem, with diagonal negative space -->
+<path fill="url(#navy)" d="M230 260L410 445L322 538L230 640ZM230 650L420 458L485 526L230 794Z"/>
+<!-- rising arrow -->
+<path fill="url(#navy)" d="M455 515L645 322L620 430L589 404L495 502Z"/>
+<!-- orange momentum strokes -->
+<path fill="url(#orange)" d="M155 807L422 539L468 588L155 900Z"/>
+<path fill="url(#orange)" d="M215 900L505 607V900Z"/>
+</svg>

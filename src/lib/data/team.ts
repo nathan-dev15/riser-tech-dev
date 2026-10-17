@@ -6,7 +6,7 @@ export const teamMembers: TeamMember[] = [
     name: 'John Smith',
     position: 'Chief Executive Officer',
     image: '/images/team/ceo.jpg',
-    description: 'Leading RiserTech with over 15 years of experience in fire safety solutions and business development.',
+    description: 'Leading Riser Technologies with over 15 years of experience in fire safety solutions and business development.',
     highlights: [
       '15+ years in fire safety industry',
       'Certified Fire Safety Professional',

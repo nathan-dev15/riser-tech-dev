@@ -12,7 +12,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/about/about-image-3-page.jpg"
-            alt="Contact RiserTech Background"
+            alt="Contact Riser Technologies Background"
             fill
             className="object-cover"
             priority
