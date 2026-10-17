@@ -14,6 +14,11 @@ const faqs = [
       'Yes. Riser Technologies is an authorised Indian distribution partner for Reliable Fire Sprinklers (USA) — one of the world\'s leading manufacturers of UL Listed and FM Approved fire sprinkler systems. We supply genuine Reliable Fire Sprinklers products including sprinkler heads, system valves, grooved connections, and pre-action systems across India from our base in Chennai, Tamil Nadu.',
   },
   {
+    question: 'How long has Reliable Automatic Sprinkler been a leader in fire protection?',
+    answer:
+      'Reliable Automatic Sprinkler Co. has been a leader in the fire protection industry for over 100 years. They manufacture all their fire protection valves and sprinklers at their flagship advanced manufacturing facility in Liberty, South Carolina — housing Product Development, Engineering, Quality Assurance, Manufacturing, Product Technology, and Shipping teams under one roof. With regional sales and distribution centres across the U.S. and worldwide, Reliable combines precision engineering and cutting-edge technology to produce UL Listed and FM Approved fire sprinkler systems trusted globally. Riser Technologies is proud to be the authorised distributor of Reliable Fire Sprinklers in India. Learn more: https://www.reliablesprinkler.com/about-us/',
+  },
+  {
     question: 'What Reliable Sprinkler products does Riser Technologies supply in India?',
     answer:
       'Riser Technologies supplies the complete Reliable Fire Sprinklers product portfolio in India: fire sprinkler heads (Quick Response, Standard Response, ESFR, residential), system valves (alarm check valves, deluge, dry-pipe, pre-action), grooved pipe connections (couplings, fittings, flanges), general purpose valves (OS&Y gate, butterfly, check), and the LB11 lithium-ion battery storage sprinkler. All products are UL Listed and/or FM Approved. Full product range: https://www.reliablesprinkler.com/products/sprinklers/',
@@ -70,7 +75,7 @@ const faqs = [
   },
 ];
 
-// Show only top 5 in UI — all 12 remain in FAQPageSchema for Google rich results
+// Show only top 5 in UI — all 13 remain in FAQPageSchema for Google rich results
 const VISIBLE_FAQS = faqs.slice(0, 5);
 
 export function FAQ() {
