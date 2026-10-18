@@ -4,7 +4,9 @@ import { Button3D } from '@/components/ui/Button3D';
 import { Flame, PanelTop, Droplet, UtensilsCrossed, Building2, Bell, Signpost, CheckCircle, ArrowLeft, LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ProductSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { ProductSchema, BreadcrumbSchema, FAQPageSchema, StructuredData } from '@/components/seo/StructuredData';
+import { SprinklerFAQ } from '@/components/sections/SprinklerFAQ';
+import { sprinklerFaqs } from '@/lib/sprinkler-faqs';
 import type { Metadata } from 'next';
 
 const icons: Record<string, LucideIcon> = {
@@ -34,6 +36,41 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     if (!category) {
       return {
         title: 'Product Category Not Found',
+      };
+    }
+
+    // Sprinkler-specific SEO override
+    if (category.slug === 'sprinklers') {
+      return {
+        title: 'Reliable Fire Sprinklers in Chennai | UL Listed & FM Approved | Riser Technologies',
+        description: 'Buy UL Listed & FM Approved Reliable Automatic Sprinklers in Chennai, Tamil Nadu & India. Quick Response, ESFR, concealed, residential & storage sprinklers. Authorised Reliable Sprinkler distributor — Riser Technologies.',
+        keywords: [
+          'Reliable fire sprinklers Chennai',
+          'UL Listed fire sprinklers Chennai',
+          'FM Approved sprinklers India',
+          'fire sprinkler supplier Chennai',
+          'ESFR sprinklers Chennai',
+          'quick response sprinklers Tamil Nadu',
+          'concealed sprinklers Chennai',
+          'fire sprinkler system Chennai',
+          'Reliable Automatic Sprinkler India',
+          'fire sprinkler heads Chennai',
+          'sprinkler system supplier Tamil Nadu',
+          'buy fire sprinklers India',
+        ],
+        openGraph: {
+          title: 'Reliable Fire Sprinklers in Chennai | UL Listed & FM Approved | Riser Technologies',
+          description: 'UL Listed & FM Approved Reliable fire sprinklers in Chennai — Quick Response, ESFR, concealed, residential & storage. Authorised Indian distributor.',
+          url: `${baseUrl}/products/sprinklers`,
+          type: 'website',
+          images: [{ url: `${baseUrl}/images/products/sprinklers/category.jpg`, width: 1200, height: 630, alt: 'Reliable Fire Sprinklers Chennai - Riser Technologies' }],
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title: 'Reliable Fire Sprinklers in Chennai | UL Listed & FM Approved',
+          description: 'Authorised Reliable Sprinkler distributor in Chennai, Tamil Nadu & India. UL Listed, FM Approved.',
+        },
+        alternates: { canonical: `/products/sprinklers` },
       };
     }
 
@@ -236,10 +273,32 @@ export default async function ProductPage({ params }: ProductPageProps) {
             )}
           </div>
         </section>
+
+        {/* Sprinkler-specific FAQ section + server-rendered schemas */}
+        {category.slug === 'sprinklers' && (
+          <>
+            <FAQPageSchema faqs={sprinklerFaqs} />
+            <StructuredData data={{
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              name: 'Reliable Fire Sprinklers — Product Range',
+              description: 'UL Listed & FM Approved Reliable Automatic Sprinkler range available in Chennai, Tamil Nadu & India via Riser Technologies.',
+              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products/sprinklers`,
+              itemListElement: category.products.map((p, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                name: p.title,
+                description: p.description,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products/sprinklers/${p.id}`,
+              })),
+            }} />
+            <SprinklerFAQ />
+          </>
+        )}
       </div>
     );
   }
-  
+
   // Handle individual product page (e.g., /products/fire-extinguishers/multimax)
   if (slug.length === 2) {
     const product = getProductBySlug(slug);
