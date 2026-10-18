@@ -73,10 +73,65 @@ const faqs = [
     answer:
       'Yes. Riser Technologies offers free technical consultations for fire sprinkler system design, product selection, and compliance guidance across India. Whether you are specifying ESFR for a new warehouse, DDX for a data centre, or LB11 for an EV battery plant, our team will help you select the right Reliable Sprinkler solution. Call 9787666104 or submit a request through our Contact page.',
   },
+  {
+    question: 'What do the glass bulb colours on a Reliable sprinkler mean?',
+    answer:
+      'Glass bulb colour on a Reliable fire sprinkler indicates its temperature rating per NFPA 13: Orange = 57 °C (135 °F), Red = 68 °C (155 °F), Yellow = 79 °C (174 °F), Green = 93 °C (200 °F), Blue = 141 °C (286 °F), Mauve/Purple = 182 °C (360 °F), Black = 227–260 °C (440–500 °F). For typical office and commercial buildings in Chennai where ambient temperatures are 25–35 °C, Ordinary temperature rated sprinklers (Orange 57 °C or Red 68 °C) are standard. Higher-rated bulbs are selected for boiler rooms, cooking areas, or heat-generating industrial processes.',
+  },
+  {
+    question: 'What is the K-factor of a fire sprinkler and which K-factor does Reliable offer?',
+    answer:
+      'The K-factor determines how much water a sprinkler discharges at a given pressure, using the formula Q = K√P (where Q = flow in LPM, K = K-factor, P = pressure in bar). Reliable Automatic Sprinkler offers a full K-factor range: K-57 (K-2.8), K-80 (K-4.2 residential), K-115 (K-5.6 standard), K-162 (K-8.0 large orifice), K-202 (K-11.2 extra large), K-242 (K-14.0 CMSA), K-363 (K-22.4 ESFR). Higher K-factors deliver more water at lower pressures — critical for ESFR warehouse protection and high-rack storage applications in India.',
+  },
+  {
+    question: 'What is the difference between Quick Response and Standard Response Reliable sprinklers?',
+    answer:
+      'Quick Response (QR) Reliable sprinklers have a 3 mm glass bulb and a Response Time Index (RTI) of ≤50 (m·s)½ — they activate faster in a developing fire, reducing heat and smoke damage. Standard Response (SR) sprinklers use a 5 mm bulb with RTI ≥80 (m·s)½. NFPA 13 mandates Quick Response sprinklers in light hazard occupancies such as offices, hotels, hospitals, and schools. Standard Response is used in ordinary and extra hazard occupancies like warehouses and factories. Riser Technologies supplies both QR and SR Reliable sprinklers across Chennai, Tamil Nadu, and India.',
+  },
+  {
+    question: 'What sprinkler orientations does Reliable offer — pendent, upright, or sidewall?',
+    answer:
+      'Reliable Automatic Sprinkler manufactures all standard orientations: Pendent (deflector faces down, most common in false-ceiling buildings), Upright (deflector faces up, used in open industrial ceilings and storage racks), Horizontal Sidewall (mounts on a wall, ideal for corridors and narrow rooms), Concealed Pendent (recessed behind a decorative cover plate for aesthetic spaces), and Vertical Sidewall. For most commercial buildings in Chennai — offices, malls, hotels — pendent concealed sprinklers are specified. Upright sprinklers are standard in warehouses and manufacturing plants.',
+  },
+  {
+    question: 'What is the difference between concealed and recessed Reliable sprinklers?',
+    answer:
+      'A Concealed Reliable sprinkler sits fully flush behind a flat cover plate that falls away at 57 °C before the sprinkler activates — invisible when installed and preferred for hotel lobbies, corporate offices, and high-end residential buildings in Chennai. A Recessed sprinkler has the deflector and body partially recessed into an escutcheon but the sprinkler head remains slightly visible. Both meet NFPA 13, with concealed models offering the cleanest aesthetic finish.',
+  },
+  {
+    question: 'What is the minimum operating pressure for Reliable fire sprinklers?',
+    answer:
+      'Most Reliable pendent, upright, and sidewall sprinklers require a minimum operating pressure of 0.5 bar (7 psi) at the sprinkler head. Residential Reliable sprinklers may operate as low as 0.34 bar (5 psi). ESFR sprinklers such as the P22 and JL17 require higher minimum pressures — typically 1.7 to 3.4 bar — to achieve the high-density discharge needed to suppress storage fires. Hydraulic calculations per NFPA 13 determine the exact system demand pressure for each installation.',
+  },
+  {
+    question: 'What is a Sprinkler Identification Number (SIN) on a Reliable sprinkler?',
+    answer:
+      'A Sprinkler Identification Number (SIN) is a unique alphanumeric code stamped on every UL Listed Reliable sprinkler — for example, R3511 (standard pendent), RC1 (concealed residential), or F1FR (ESFR storage). The SIN identifies the exact model, K-factor, temperature rating, and finish. NFPA 13 and NFPA 25 require that replacement sprinklers match the original SIN precisely — never substitute a different SIN even if the external appearance looks identical. Riser Technologies stocks a wide range of Reliable SINs for maintenance and replacement across India.',
+  },
+  {
+    question: 'What is the difference between a glass bulb and fusible link Reliable sprinkler?',
+    answer:
+      'A glass bulb Reliable sprinkler uses a small sealed glass ampule filled with glycerine that shatters at its rated temperature, releasing the cap and deflector to allow water flow. A fusible link (or solder element) sprinkler uses a bi-metallic strip or soldered link that separates at the rated temperature. Glass bulb sprinklers are more common today — they offer precise temperature response, are corrosion-resistant, and are available in a wide K-factor and temperature range. Fusible link Reliable sprinklers are used in specialised industrial environments where glass bulbs may be exposed to vibration or chemical contamination.',
+  },
+  {
+    question: 'Which Reliable sprinkler is best for a data centre or server room in India?',
+    answer:
+      'For data centres and server rooms, a Pre-Action Reliable system using the DDX double-interlock valve with Quick Response pendent sprinklers is the gold standard — water only enters the pipe when both a detection signal AND a sprinkler activates, eliminating accidental discharge risk. The sprinkler itself is typically a QR pendent with a 68 °C (Red bulb) rating. Where ceiling aesthetics matter, Reliable concealed pendent sprinklers with decorative cover plates are specified. Riser Technologies designs and supplies complete DDX pre-action systems for data centres, IT parks, and server rooms across Chennai and India.',
+  },
+  {
+    question: 'How do I select the right Reliable sprinkler temperature rating for my building in Chennai?',
+    answer:
+      'NFPA 13 temperature selection is based on the maximum expected ambient temperature at the ceiling. In Chennai, where ambient temperatures can reach 38–40 °C in summer, Ordinary temperature rating (57 °C Orange or 68 °C Red bulb) is standard for air-conditioned spaces. Intermediate rating (79 °C Yellow or 93 °C Green) is used in non-air-conditioned warehouses, corridors, and rooftop plant rooms where ceiling temperatures may exceed 38 °C. High-temperature ratings (141 °C Blue) are used near boilers, industrial ovens, or steam rooms. As a rule: the maximum ceiling temperature should not exceed 38 °C below the sprinkler\'s rated temperature.',
+  },
+  {
+    question: 'Does Reliable supply sprinkler storage cabinets and spare sprinkler heads in India?',
+    answer:
+      'Yes. NFPA 13 requires every sprinkler installation to maintain a minimum number of spare sprinkler heads of each type and a sprinkler wrench for replacement — typically 6 spare heads for systems with fewer than 300 sprinklers, and 24 heads for larger systems. Riser Technologies supplies Reliable sprinkler storage cabinets and spare head kits for all installed models in India. Regular spare stock ensures fast replacement after a fire event or accidental damage without waiting for import shipments.',
+  },
 ];
 
-// Show only top 5 in UI — all 13 remain in FAQPageSchema for Google rich results
-const VISIBLE_FAQS = faqs.slice(0, 5);
+// Show only top 6 in UI — all remain in FAQPageSchema for Google rich results
+const VISIBLE_FAQS = faqs.slice(0, 6);
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
