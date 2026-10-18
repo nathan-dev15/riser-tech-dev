@@ -178,6 +178,36 @@ const alarmSolutions = [
 
 const valves = [
   {
+    id: 'v1',
+    title: 'Alarm Check Valve',
+    description: 'Wet alarm check valve for automatic water flow detection and alarm activation in wet pipe fire sprinkler systems.',
+    image: '/images/products/valves/wet-alaram-valve.png',
+  },
+  {
+    id: 'v2',
+    title: 'Deluge System Valves',
+    description: 'DDV deluge valves for open-head fire suppression systems, providing rapid and simultaneous discharge across all nozzles.',
+    image: '/images/products/valves/ddv-deluge-valve.png',
+  },
+  {
+    id: 'v3',
+    title: 'Post Indicator',
+    description: 'Post indicator wall-type valve for visual confirmation of open/closed status on buried or wall-mounted fire protection gate valves.',
+    image: '/images/products/valves/post-indicator-wall-type.png',
+  },
+  {
+    id: 'v4',
+    title: 'Check Valve',
+    description: 'Flanged swing check valve preventing backflow in fire protection pipelines, ensuring unidirectional water flow at all times.',
+    image: '/images/products/valves/flange-swing-check.png',
+  },
+  {
+    id: 'v5',
+    title: 'Preaction Alarm Valve',
+    description: 'Preaction alarm valve for double-interlock fire suppression systems, combining smoke detection and sprinkler activation for precise control.',
+    image: '/images/products/valves/preaction-alarm-valve.png',
+  },
+  {
     id: '1',
     title: 'Alarm Valve',
     description: 'Reliable alarm valve for fire protection systems with automatic alarm activation and water flow detection.',
@@ -199,7 +229,7 @@ const valves = [
     id: '4',
     title: 'Butterfly Valves',
     description: 'Compact butterfly valves designed for fire sprinkler systems with excellent flow control and reliable operation.',
-    image: '/images/products/valves/butterfly-valve-1.jpg',
+    image: '/images/products/valves/butterfly-valve-1.png',
   },
   {
     id: '5',
@@ -211,7 +241,7 @@ const valves = [
     id: '6',
     title: 'Y-Type Strainers',
     description: 'High-quality Y-type strainers for fire protection systems preventing debris and ensuring clean water flow.',
-    image: '/images/products/valves/y-strainer-1.jpg',
+    image: '/images/products/valves/y-strainer-1.png',
   },
   {
     id: '7',
@@ -224,6 +254,12 @@ const valves = [
     title: 'Pressure Switches',
     description: 'Advanced pressure switches for fire protection systems with automatic activation and reliable pressure monitoring.',
     image: '/images/products/valves/pressure-switch-1.jpg',
+  },
+  {
+    id: '9',
+    title: 'Test and Drain Valve',
+    description: 'Test and drain valve for inspecting, testing, and draining fire sprinkler systems with ease and precision.',
+    image: '/images/products/valves/TestandDrain-Valve.png',
   },
 ];
 

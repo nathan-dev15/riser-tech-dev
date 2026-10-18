@@ -20,7 +20,7 @@ const heroSlides = [
   {
   id: 2,
   title: 'Pre-Action Fire System',
-  subtitle: 'Reliable Model DDX Pneumatic/Electric',
+  subtitle: '',
   description: 'Advanced fire suppression powered by the Reliable Model DDX Valve and RC-1 Release Control Panel. Features a double-interlock design utilizing a double-headed valve.',
   image: '/images/hero/Pre-Action-1.png',
   gradient: 'from-blue-950 via-slate-900 to-sky-900',
@@ -29,7 +29,7 @@ const heroSlides = [
   {
     id: 3,
     title: 'Reliable Fire Safety',
-    subtitle: 'Starts Here',
+    subtitle: '',
     description: 'State-of-the-art fire protection systems designed to keep your property safe. Professional installation and 24/7 support.',
     image: '/images/hero/hero-2.jpg',
     gradient: 'from-gray-900 via-amber-900 to-yellow-900',
@@ -38,8 +38,8 @@ const heroSlides = [
     {
     id: 4,
     title: 'Gas Suppression System',
-    subtitle: 'Total Flooding Fluoroketone (FK) Based Fire Suppression System',
-    description: 'Advanced FK-based gas suppression system for complete fire protection. Environmentally friendly, zero ozone depletion. Fast discharge, total flooding coverage. Ideal for data centers, server rooms, and critical facilities in Chennai. Certified installation and maintenance services.',
+    subtitle: 'Total Flooding Fluoroketone (FK).',
+    description: '',
     image: '/images/hero/suppression-system-7.jpg',
     gradient: 'from-cyan-900 via-blue-900 to-indigo-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
@@ -48,7 +48,7 @@ const heroSlides = [
     id: 5,
     title: 'TUBE BASED SUPPRESSION SYSTEM',
     subtitle: "",
-    description: 'Quick Response System for rapid fire detection and suppression. Advanced technology for fast response times. Reliable fire safety solution for commercial and industrial properties in Chennai.',
+    description: 'Quick Response System for rapid fire detection and suppression.',
     image: '/images/hero/hero-9.png',
     gradient: 'from-green-900 via-emerald-900 to-teal-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
@@ -56,8 +56,8 @@ const heroSlides = [
   {
   id: 6, // Adjusted ID for sequence
   title: 'ADVANCED PREACTION CABINET',
-  subtitle: 'RELIABLE FIRE SYSTEMS',
-  description: 'Integrated preaction system featuring advanced single or double interlock control mechanisms. Factory assembled and pressure tested for seamless installation. Ultimate protection for high-value commercial and industrial assets in Chennai.',
+  subtitle: '',
+  description: 'Integrated preaction system featuring advanced single or double interlock control mechanisms.',
   image: '/images/hero/preaction-cabinet.jpg', 
   gradient: 'from-red-900 via-rose-950 to-neutral-900',
   overlay: 'rgba(0, 0, 0, 0.55)',
@@ -67,7 +67,7 @@ const heroSlides = [
     id: 7,
     title: 'Fire Protection System',
     subtitle: 'Advanced Solutions',
-    description: 'Comprehensive fire protection systems with cutting-edge technology. From detection to suppression, we provide complete fire safety solutions for your business.',
+    description: 'Comprehensive fire protection systems with cutting-edge technology. ',
     image: '/images/hero/hero-4.jpg',
     gradient: 'from-gray-900 via-slate-800 to-amber-800',
     overlay: 'rgba(0, 0, 0, 0.5)',
@@ -76,7 +76,7 @@ const heroSlides = [
     id: 8,
     title: 'SUPPRESSION SYSTEMS',
     subtitle: 'Advanced Fire Suppression',
-    description: 'State-of-the-art fire suppression systems designed to quickly extinguish fires and protect your property. Professional installation and maintenance services available in Chennai.',
+    description: 'State-of-the-art fire suppression systems designed to quickly extinguish fires and protect your property.',
     image: '/images/hero/hero-5.png',
     gradient: 'from-amber-900 via-red-900 to-orange-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
@@ -84,8 +84,8 @@ const heroSlides = [
   {
     id: 9,
     title: 'KITCHEN FIRE SUPPRESSION',
-    subtitle: 'LPCB Certified Commercial Kitchen Suppression System (Wet Chemical Based)',
-    description: 'LPCB certified wet chemical kitchen fire suppression system. Automatic detection and suppression for commercial kitchens in Chennai. Professional installation and maintenance for restaurants and hotels.',
+    subtitle: '',
+    description: 'LPCB certified wet chemical kitchen fire suppression system (Wet Chemical Based). Professional installation and maintenance for restaurants and hotels.',
     image: '/images/hero/kitchen-suppression-1.jpg',
     gradient: 'from-orange-900 via-red-900 to-amber-900',
     overlay: 'rgba(0, 0, 0, 0.5)',
@@ -94,7 +94,7 @@ const heroSlides = [
   {
     id: 10,
     title: 'ALARM SOLUTIONS',
-    subtitle: 'Fire alarm system',
+    subtitle: '',
     description: 'Professional fire alarm system installation in Chennai. Addressable and conventional fire alarm systems. Smoke detectors, heat detectors, and manual call points. 24/7 monitoring and maintenance.  Expert fire alarm installation services for commercial and residential properties.',
     image: '/images/hero/hero-10.png',
     gradient: 'from-purple-900 via-pink-900 to-rose-900',
@@ -103,7 +103,7 @@ const heroSlides = [
     {
     id: 11,
     title: 'Certified Experts',
-    subtitle: 'Trusted Solutions',
+    subtitle: '',
     description: 'Over 12 years of experience in fire safety. Certified professionals ready to protect what matters most to you.',
     image: '/images/slide/certified-experts.jpg',
     gradient: 'from-slate-800 via-amber-800 to-yellow-800',
@@ -161,7 +161,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden pt-24 z-0"
+      className="relative mt-20 h-[500px] overflow-hidden z-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -277,7 +277,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 md:py-12 lg:py-16 text-center w-full min-h-screen flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 md:py-12 lg:py-16 text-center w-full h-[500px] flex flex-col justify-center">
         {/* Badge - Static, no re-animation */}
         <div className="flex justify-center mb-1.5 sm:mb-3.5 md:mb-4.5 lg:mb-5.5">
           <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 max-w-[85%] sm:max-w-none">
@@ -370,27 +370,27 @@ export function Hero() {
               className="group relative"
               data-card="true"
             >
-              <div 
+              {/* <div 
                 data-card="true"
                 className="relative bg-white/10 backdrop-blur-xl rounded-lg sm:rounded-xl p-2 sm:p-2.5 md:p-3.5 border border-white/20 group-hover:border-amber-400/60 group-hover:bg-white/20 transition-all duration-300 shadow-lg sm:shadow-xl group-hover:shadow-2xl group-hover:shadow-amber-500/20"
               >
                 <div className="flex flex-col items-center">
-                  {/* Icon - stable, no animations */}
+        
                   <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-amber-500/20 flex items-center justify-center mb-1 sm:mb-1.5 md:mb-2.5 group-hover:bg-amber-500/30 transition-colors duration-300">
                     <stat.icon className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${stat.color} transition-colors duration-300`} />
                   </div>
                   
-                  {/* Value */}
+        
                   <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-0.5 sm:mb-0.5 md:mb-1.5 bg-gradient-to-r from-amber-300 to-yellow-300 bg-clip-text text-transparent leading-tight">
                     {stat.value}
                   </div>
                   
-                  {/* Label */}
+       
                   <div className="text-[7px] sm:text-[8px] md:text-[9px] lg:text-[10px] font-medium text-white/90 group-hover:text-white transition-colors duration-300 uppercase tracking-wider text-center leading-tight">
                     {stat.label}
                   </div>
                 </div>
-              </div>
+              </div>  */}
             </div>
           ))}
         </div>
