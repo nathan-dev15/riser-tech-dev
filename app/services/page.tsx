@@ -2,10 +2,20 @@ import { Metadata } from 'next';
 import { SERVICES } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Fire Sprinkler Installation Services Chennai | Tamil Nadu India — Riser Technologies',
-  description: 'Professional fire sprinkler installation, maintenance & inspection services in Chennai, Tamil Nadu & across India. NFPA 13 compliant design, UL/FM approved systems. Call +91 9787666104.',
+  title: 'Fire Sprinkler System Services in Chennai | Wet Riser, Fire Extinguisher — Riser Technologies',
+  description: 'Professional fire sprinkler installation, maintenance & inspection in Chennai, Tamil Nadu. Fire Sprinkler System, Wet Riser System, Fire Extinguisher, Commercial Sprinkler Solutions. NFPA 13 compliant. Call +91 9787666104.',
   keywords: [
     'fire sprinkler installation chennai',
+    'fire sprinkler system in chennai',
+    'fire sprinkler system fire alarm system dealers',
+    'Wet Riser System Dealers in Chennai',
+    'wet riser system installation chennai',
+    'wet riser system supplier chennai',
+    'fire extinguisher dealers in chennai',
+    'fire extinguisher supplier chennai',
+    'commercial sprinkler solutions',
+    'commercial sprinkler solutions chennai',
+    'fire fighting equipment supplier chennai',
     'sprinkler system service tamilnadu',
     'fire safety services india',
     'fire sprinkler maintenance chennai',
