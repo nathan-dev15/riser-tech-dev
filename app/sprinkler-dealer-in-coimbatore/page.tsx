@@ -233,6 +233,23 @@ export default function SprinklerDealerCoimbatorePage() {
         </div>
       </section>
 
+      <section className="py-10 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium">Related pages:</p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: 'Reliable Sprinkler Dealers Coimbatore', href: '/reliable-sprinkler-dealers-in-coimbatore' },
+              { label: 'Sprinkler Dealer Chennai', href: '/sprinkler-dealer-in-chennai' },
+              { label: 'Reliable Sprinkler Dealer Tamil Nadu', href: '/reliable-sprinkler-dealer-tamil-nadu' },
+              { label: 'Sprinkler System Chennai', href: '/sprinkler-system-chennai' },
+              { label: 'All Products', href: '/products' },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="text-sm text-amber-600 hover:text-amber-700 underline underline-offset-2">{l.label}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-14 bg-slate-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

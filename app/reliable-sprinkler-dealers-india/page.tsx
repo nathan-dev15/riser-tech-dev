@@ -228,6 +228,24 @@ export default function ReliableSprinklerDealersIndiaPage() {
         </div>
       </section>
 
+      <section className="py-10 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium">Related pages:</p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: 'Reliable Sprinkler Dealers Chennai', href: '/reliable-sprinkler-dealers-in-chennai' },
+              { label: 'Reliable Sprinkler Dealers Bangalore', href: '/reliable-sprinkler-dealers-in-bangalore' },
+              { label: 'Reliable Sprinkler Dealers Hyderabad', href: '/reliable-sprinkler-dealers-in-hyderabad' },
+              { label: 'Fire Sprinkler Supplier India', href: '/fire-sprinkler-supplier-india' },
+              { label: 'Sprinkler System Delhi', href: '/sprinkler-system-delhi' },
+              { label: 'All Products', href: '/products' },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="text-sm text-amber-600 hover:text-amber-700 underline underline-offset-2">{l.label}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 bg-slate-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Shield className="w-10 h-10 text-amber-500 mx-auto mb-4" />

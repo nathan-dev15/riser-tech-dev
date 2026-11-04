@@ -153,6 +153,23 @@ export default function ReliableSprinklerDealersBangalorePage() {
         </div>
       </section>
 
+      <section className="py-10 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium">Related pages:</p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: 'Reliable Dealers India', href: '/reliable-sprinkler-dealers-india' },
+              { label: 'Sprinkler Dealer Bangalore', href: '/sprinkler-dealer-in-bangalore' },
+              { label: 'Reliable Sprinkler Dealers Chennai', href: '/reliable-sprinkler-dealers-in-chennai' },
+              { label: 'Sprinkler System Delhi', href: '/sprinkler-system-delhi' },
+              { label: 'All Products', href: '/products' },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="text-sm text-amber-600 hover:text-amber-700 underline underline-offset-2">{l.label}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 bg-slate-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Get Genuine Reliable Sprinklers for Your Bangalore Project</h2>
