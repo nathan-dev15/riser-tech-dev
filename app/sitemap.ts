@@ -180,6 +180,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.95,
     },
+    // Generic sprinkler keyword pages
+    {
+      url: `${baseUrl}/sprinkler-system-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/automatic-sprinkler-system-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/fire-fighting-sprinklers-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sprinkler-alarm-installation-service-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // City expansion pages
+    {
+      url: `${baseUrl}/sprinkler-system-delhi`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Reliable valves pages
+    {
+      url: `${baseUrl}/reliable-system-valves-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    // Hydrant & extinguisher pages
+    {
+      url: `${baseUrl}/fire-hydrant-system-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/fire-extinguisher-dealer-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // Fire suppression system pages
     {
       url: `${baseUrl}/reliable-fire-suppression-system-chennai`,
