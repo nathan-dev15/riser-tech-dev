@@ -318,6 +318,44 @@ export default function ReliableSprinklerChennaiPage() {
             sheets — the complete documentation set required for Indian building authority approvals and insurance.
           </p>
 
+          <h2>Reliable® Automatic Sprinkler Systems — Brand, Not an Adjective</h2>
+          <p>
+            When MEP consultants, fire protection contractors, and facility managers in Chennai specify{' '}
+            <strong>Reliable® Automatic Sprinkler</strong> components, they are naming a manufacturer — not
+            describing a product quality. Reliable Automatic Sprinkler Co. has manufactured fire sprinklers
+            since 1920, and every <strong>Reliable brand sprinkler head</strong>, valve, and system component
+            carries a UL Listing and FM Approval earned at the point of manufacture — not retrofitted through
+            a third-party test house.
+          </p>
+          <p>
+            Authorized Reliable Sprinkler components cannot be substituted with products labelled
+            &ldquo;reliable quality&rdquo; or sourced from unauthorized channels. When your hydraulic design
+            calls for a <strong>Reliable K-factor sprinkler</strong> — whether a K-5.6 pendent for a commercial
+            ceiling or a K-11.2 ESFR head for a Sriperumbudur warehouse — Riser Technologies supplies the
+            identical UL Listed model with the exact activation temperature, orifice size, and deflector
+            geometry called for in the NFPA 13 design. The UL Listing and FM Approval are model-specific
+            and K-factor-specific; substitution invalidates the system certification.
+          </p>
+
+          <h3>Reliable® Fire Protection Systems — Full Product Range for Chennai Projects</h3>
+          <p>
+            Riser Technologies stocks and supplies the complete{' '}
+            <strong>Reliable Automatic Sprinkler</strong> portfolio for Chennai and PAN-India delivery:
+          </p>
+          <ul>
+            <li><strong>Reliable brand sprinkler heads</strong> — pendent, upright, sidewall, concealed, ESFR, residential, dry-barrel, and the LB11 lithium-ion battery sprinkler</li>
+            <li><strong>Reliable K-factor sprinklers</strong> from K-2.8 to K-19.6 for all hazard classifications under NFPA 13</li>
+            <li><strong>Reliable fire protection systems</strong> — alarm check valves (Model A), dry pipe valves (Model D), DDV deluge valves, DDX double-interlock pre-action systems</li>
+            <li><strong>Authorized Reliable Sprinkler components</strong> — grooved fittings, escutcheons, cover plates, tamper switches, flow switches, and trim packages</li>
+          </ul>
+          <p>
+            For Chennai-based projects, materials are available same-day from our local warehouse. For
+            contractors and consultants in Bangalore, Hyderabad, Delhi NCR, Mumbai, and Pune,{' '}
+            <strong>Authorized Reliable Sprinkler components</strong> are dispatched via express logistics
+            with manufacturer documentation — UL/FM test reports, product data sheets, and authorization
+            letters — included with every consignment.
+          </p>
+
           <h3>Riser Technologies — Your Reliable Sprinkler Partner in Chennai</h3>
           <p>
             Riser Technologies is a Chennai-based fire protection company specializing in Reliable Automatic Sprinkler Co.
