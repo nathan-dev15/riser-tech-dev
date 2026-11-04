@@ -1,13 +1,10 @@
-'use client';
-
 import { Card } from '@/components/ui/Card';
 import { Card3D } from '@/components/ui/Card3D';
-import { CheckCircle, Users, Award, Clock, Shield } from 'lucide-react';
+import { CheckCircle, Users, Award, Shield } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TeamSection } from '@/components/sections/TeamSection';
 import { WinningSteps } from '@/components/sections/WinningSteps';
-import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   return (

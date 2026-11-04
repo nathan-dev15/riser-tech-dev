@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { HashScrollHandler } from '@/components/features/HashScrollHandler';
 import { ProductSection } from '@/components/sections/ProductSection';
 import { ProductCard3D } from '@/components/sections/ProductCard3D';
 import { ProductSlide } from '@/components/sections/ProductSlide';
@@ -264,28 +264,9 @@ const valves = [
 ];
 
 export default function ProductsPage() {
-  useEffect(() => {
-    // Handle smooth scroll to section on page load if hash is present
-    const hash = window.location.hash;
-    if (hash) {
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 300);
-    }
-  }, []);
-
   return (
     <div className="min-h-screen">
+      <HashScrollHandler />
       {/* Section 1: Our Full Spectrum Fire Solutions */}
       <section
         id="full-spectrum"
