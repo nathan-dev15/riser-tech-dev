@@ -1,4 +1,4 @@
-import { SERVICES } from '@/lib/constants';
+﻿import { SERVICES } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
 import { Button3D } from '@/components/ui/Button3D';
 import { Bell, Lightbulb, Shield, Droplet, TrendingUp, CheckCircle } from 'lucide-react';
@@ -20,7 +20,7 @@ const icons: Record<string, any> = {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = SERVICES.find((s) => s.id === slug);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
 
   if (!service) {
     return {
@@ -76,7 +76,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   }
 
   const Icon = icons[service.icon] || Shield;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
 
   // Breadcrumbs for service page
   const breadcrumbs = [

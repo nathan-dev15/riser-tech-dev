@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from '@/components/providers/AppProviders';
@@ -211,14 +211,14 @@ export const metadata: Metadata = {
   authors: [{ name: 'Riser Technologies' }],
   creator: 'Riser Technologies',
   publisher: 'Riser Technologies',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in',
     siteName: 'Riser Technologies — Reliable Sprinkler Distributor India',
     title: 'Sprinkler Systems Chennai | UL/FM Fire Sprinklers Tamil Nadu India — Riser Technologies',
     description:

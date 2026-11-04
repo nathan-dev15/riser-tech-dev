@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Structured Data (Schema.org) Components
  * For better SEO and rich snippets in search results
  */
@@ -24,7 +24,7 @@ export function StructuredData({ data }: StructuredDataProps) {
  * For homepage and general site information
  */
 export function OrganizationSchema() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   
   const schema = {
     '@context': 'https://schema.org',
@@ -62,7 +62,7 @@ export function OrganizationSchema() {
  * For local SEO in Chennai
  */
 export function LocalBusinessSchema() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   
   const schema = {
     '@context': 'https://schema.org',
@@ -170,7 +170,7 @@ export function LocalBusinessSchema() {
  * For individual product pages
  */
 export function ProductSchema({ product, category }: { product: Product; category: ProductCategory }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   const productUrl = `${baseUrl}/products/${category.slug}/${product.id}`;
   
   const schema = {
@@ -216,7 +216,7 @@ export function ProductSchema({ product, category }: { product: Product; categor
  * For navigation and SEO
  */
 export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: string }> }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   
   const schema = {
     '@context': 'https://schema.org',
@@ -245,7 +245,7 @@ export function ServiceSchema({
   description: string; 
   serviceUrl: string;
 }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   
   const schema = {
     '@context': 'https://schema.org',
@@ -277,7 +277,7 @@ export function ServiceSchema({
  * For FAQ sections
  */
 export function FAQPageSchema({ faqs }: { faqs: Array<{ question: string; answer: string }> }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   
   const schema = {
     '@context': 'https://schema.org',

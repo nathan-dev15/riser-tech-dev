@@ -1,9 +1,9 @@
-import { MetadataRoute } from 'next';
+﻿import { MetadataRoute } from 'next';
 import { SERVICES } from '@/lib/constants';
 import { PRODUCT_CATEGORIES } from '@/lib/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
   const currentDate = new Date();
 
   // Static pages

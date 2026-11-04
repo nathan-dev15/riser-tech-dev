@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import { OrganizationSchema, LocalBusinessSchema } from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Sprinkler Dealer & Distributor in Chennai | Fire Safety Products — Riser Technologies',
     description:
       'Authorised Sprinkler Dealer & Distributor in Chennai. ESFR, Pendent, Upright, Concealed Sprinklers. Fire Extinguishers, Suppression Systems at best price in Tamil Nadu.',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'}/products`,
     type: 'website',
   },
   alternates: {

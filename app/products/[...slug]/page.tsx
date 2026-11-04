@@ -1,4 +1,4 @@
-import { getProductBySlug, getCategoryBySlug, PRODUCT_CATEGORIES } from '@/lib/products';
+﻿import { getProductBySlug, getCategoryBySlug, PRODUCT_CATEGORIES } from '@/lib/products';
 import { Card } from '@/components/ui/Card';
 import { Button3D } from '@/components/ui/Button3D';
 import { Flame, PanelTop, Droplet, UtensilsCrossed, Building2, Bell, Signpost, CheckCircle, ArrowLeft, LucideIcon } from 'lucide-react';
@@ -28,7 +28,7 @@ interface ProductPageProps {
 // Generate metadata for product pages
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
 
   // Handle category listing page
   if (slug.length === 1) {
@@ -229,7 +229,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     }
     
     const CategoryIcon = category.icon;
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
     
     // Breadcrumbs for category page
     const breadcrumbs = [
@@ -336,13 +336,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
               '@type': 'ItemList',
               name: 'Reliable Fire Sprinklers — Product Range',
               description: 'UL Listed & FM Approved Reliable Automatic Sprinkler range available in Chennai, Tamil Nadu & India via Riser Technologies.',
-              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products/sprinklers`,
+              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'}/products/sprinklers`,
               itemListElement: category.products.map((p, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
                 name: p.title,
                 description: p.description,
-                url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/products/sprinklers/${p.id}`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'}/products/sprinklers/${p.id}`,
               })),
             }} />
             <SprinklerFAQ />
@@ -366,7 +366,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     
     const ProductIcon = icons[product.icon] || Flame;
     const CategoryIcon = category.icon;
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
     
     // Breadcrumbs for product page
     const breadcrumbs = [
