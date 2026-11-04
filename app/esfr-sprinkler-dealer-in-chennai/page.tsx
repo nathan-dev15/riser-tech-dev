@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: 'What is the price of ESFR sprinklers in Chennai?',
-    a: 'ESFR sprinkler prices in Chennai depend on the model (K-factor) and quantity. As the authorized Reliable dealer in Chennai, Riser Technologies offers the most competitive ESFR pricing in Tamil Nadu. Call +91 9787666104 or email sales@risertech.in for a project quote.',
+    a: 'ESFR sprinkler prices in Chennai depend on the model (K-factor) and quantity. As the authorized Reliable dealer in Chennai, Riser Technologies offers the most competitive ESFR pricing in Tamil Nadu. Call +91 9787666104 or email sanjeevi@risertech.in for a project quote.',
   },
   {
     q: 'Do ESFR sprinklers work for cold storage in Chennai?',
@@ -255,11 +255,11 @@ export default function ESFRSprinklerDealerChennaiPage() {
               Call +91 9787666104
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              sanjeevi@risertech.in
             </Link>
           </div>
         </div>

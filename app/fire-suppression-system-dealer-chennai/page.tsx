@@ -99,7 +99,7 @@ const faqs = [
   },
   {
     q: 'What is the cost of a fire suppression system in Chennai?',
-    a: 'Fire suppression system costs vary widely based on the system type, floor area, occupancy, and hydraulic design requirements. Riser Technologies provides fast, accurate project-specific quotations. Contact us at +91 9787666104 or sales@risertech.in for a same-day quote.',
+    a: 'Fire suppression system costs vary widely based on the system type, floor area, occupancy, and hydraulic design requirements. Riser Technologies provides fast, accurate project-specific quotations. Contact us at +91 9787666104 or sanjeevi@risertech.in for a same-day quote.',
   },
   {
     q: 'Does Riser Technologies install fire suppression systems in Chennai?',
@@ -148,7 +148,7 @@ export default function FireSuppressionSystemDealerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
               <Mail className="w-4 h-4" /> Get a Free Quote
             </Link>
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
@@ -294,8 +294,8 @@ export default function FireSuppressionSystemDealerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
           </div>
         </div>

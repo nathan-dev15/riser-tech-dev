@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'How do I order sprinklers for a Mumbai or Pune project?',
-    a: 'Call us at +91 9787666104 or email sales@risertech.in with your project details — building type, area, occupancy, and ceiling height. Our team will provide a free BOQ, design support, and competitive project pricing within 24 hours.',
+    a: 'Call us at +91 9787666104 or email sanjeevi@risertech.in with your project details — building type, area, occupancy, and ceiling height. Our team will provide a free BOQ, design support, and competitive project pricing within 24 hours.',
   },
   {
     q: 'What is the delivery time for sprinklers to Mumbai?',
@@ -344,11 +344,11 @@ export default function SprinklerDealerMumbaiPage() {
               Call +91 9787666104
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              sanjeevi@risertech.in
             </Link>
           </div>
         </div>

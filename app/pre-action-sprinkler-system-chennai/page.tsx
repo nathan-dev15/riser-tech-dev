@@ -113,7 +113,7 @@ const faqs = [
   },
   {
     q: 'How much does a pre-action sprinkler system cost in Chennai?',
-    a: 'Pre-action system costs vary based on the valve size, pipe run length, detection system type, and site conditions. As the authorized Reliable dealer in Chennai, Riser Technologies provides accurate project-specific quotations. Contact us at +91 9787666104 or sales@risertech.in for a free estimate.',
+    a: 'Pre-action system costs vary based on the valve size, pipe run length, detection system type, and site conditions. As the authorized Reliable dealer in Chennai, Riser Technologies provides accurate project-specific quotations. Contact us at +91 9787666104 or sanjeevi@risertech.in for a free estimate.',
   },
   {
     q: 'Who installs pre-action fire suppression systems in Chennai?',
@@ -157,7 +157,7 @@ export default function PreActionSprinklerSystemChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
               <Mail className="w-4 h-4" /> Get a Free Quote
             </Link>
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
@@ -343,8 +343,8 @@ export default function PreActionSprinklerSystemChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
           </div>
         </div>

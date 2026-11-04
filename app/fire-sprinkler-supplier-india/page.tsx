@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     q: 'How can I get a price quote for fire sprinklers in India?',
-    a: 'Contact Riser Technologies at +91 9787666104 or sales@risertech.in with your project details — building type, area, occupancy, and city. We provide free BOQ preparation and competitive project pricing across India.',
+    a: 'Contact Riser Technologies at +91 9787666104 or sanjeevi@risertech.in with your project details — building type, area, occupancy, and city. We provide free BOQ preparation and competitive project pricing across India.',
   },
   {
     q: 'Do you supply ESFR sprinklers for warehouses across India?',
@@ -335,11 +335,11 @@ export default function FireSprinklerSupplierIndiaPage() {
               Call +91 9787666104
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              sanjeevi@risertech.in
             </Link>
           </div>
         </div>

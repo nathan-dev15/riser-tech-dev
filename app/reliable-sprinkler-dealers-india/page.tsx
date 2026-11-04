@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'How can I buy genuine Reliable sprinklers in India?',
-    a: 'Contact Riser Technologies at +91 9787666104 or sales@risertech.in. All Reliable products we supply are genuine, factory-fresh, and come with UL/FM certification documents, manufacturer warranty, and full installation data sheets. Beware of grey-market or uncertified "Reliable" sprinklers — they won\'t have manufacturer support.',
+    a: 'Contact Riser Technologies at +91 9787666104 or sanjeevi@risertech.in. All Reliable products we supply are genuine, factory-fresh, and come with UL/FM certification documents, manufacturer warranty, and full installation data sheets. Beware of grey-market or uncertified "Reliable" sprinklers — they won\'t have manufacturer support.',
   },
   {
     q: 'Which cities does Riser Technologies supply Reliable sprinklers to in India?',
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'What is the price of Reliable sprinklers in India?',
-    a: 'As the authorized Reliable dealer in India, Riser Technologies offers the most competitive pricing on genuine Reliable products. Contact us for a project-specific quote at +91 9787666104 or sales@risertech.in.',
+    a: 'As the authorized Reliable dealer in India, Riser Technologies offers the most competitive pricing on genuine Reliable products. Contact us for a project-specific quote at +91 9787666104 or sanjeevi@risertech.in.',
   },
   {
     q: 'Is Reliable Automatic Sprinkler Co. a good brand for Indian fire projects?',
@@ -255,8 +255,8 @@ export default function ReliableSprinklerDealersIndiaPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
           </div>
         </div>

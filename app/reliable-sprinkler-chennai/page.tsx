@@ -94,7 +94,7 @@ const faqs = [
   },
   {
     q: 'What is the price of Reliable sprinklers in Chennai?',
-    a: 'Reliable sprinkler pricing depends on the model, K-factor, response type, and quantity. As the authorized Reliable dealer in Chennai, Riser Technologies provides the most competitive pricing on genuine products — without grey-market risk. Contact us at +91 9787666104 or sales@risertech.in for a same-day project quote.',
+    a: 'Reliable sprinkler pricing depends on the model, K-factor, response type, and quantity. As the authorized Reliable dealer in Chennai, Riser Technologies provides the most competitive pricing on genuine products — without grey-market risk. Contact us at +91 9787666104 or sanjeevi@risertech.in for a same-day project quote.',
   },
   {
     q: 'How do I verify Riser Technologies is an authorized Reliable dealer?',
@@ -152,8 +152,8 @@ export default function ReliableSprinklerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors text-lg">
               <Phone className="w-5 h-5" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-amber-700/40 hover:bg-amber-700/60 text-amber-200 font-semibold px-6 py-3 rounded-lg border border-amber-700/40 transition-colors">
               Request Quote
@@ -373,7 +373,7 @@ export default function ReliableSprinklerChennaiPage() {
           <p>
             For genuine Reliable sprinklers in Chennai — with manufacturer warranty, UL/FM documentation, and expert
             technical support — contact Riser Technologies at <strong>+91 9787666104</strong> or{' '}
-            <strong>sales@risertech.in</strong>.
+            <strong>sanjeevi@risertech.in</strong>.
           </p>
         </div>
       </section>
@@ -450,8 +450,8 @@ export default function ReliableSprinklerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-7 py-3.5 rounded-lg transition-colors text-lg">
               <Phone className="w-5 h-5" /> Call +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
           </div>
         </div>

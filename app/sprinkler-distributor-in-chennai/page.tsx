@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: 'What is the minimum order quantity for sprinkler distribution?',
-    a: 'We accommodate both small orders for maintenance and large project bulk orders. Contact our sales team at sales@risertech.in or +91 9787666104 for pricing based on your project requirement.',
+    a: 'We accommodate both small orders for maintenance and large project bulk orders. Contact our sales team at sanjeevi@risertech.in or +91 9787666104 for pricing based on your project requirement.',
   },
   {
     q: 'Do you distribute sprinklers outside Chennai in Tamil Nadu?',
@@ -265,11 +265,11 @@ export default function SprinklerDistributorChennaiPage() {
               Call +91 9787666104
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              sanjeevi@risertech.in
             </Link>
           </div>
         </div>

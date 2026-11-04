@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'How do I order sprinklers for a Bangalore project?',
-    a: 'Call us at +91 9787666104 or email sales@risertech.in with your project requirements — building type, floor area, occupancy class, and ceiling height. Our team will prepare a BOQ, hydraulic design support, and competitive pricing for your Bangalore project.',
+    a: 'Call us at +91 9787666104 or email sanjeevi@risertech.in with your project requirements — building type, floor area, occupancy class, and ceiling height. Our team will prepare a BOQ, hydraulic design support, and competitive pricing for your Bangalore project.',
   },
   {
     q: 'What is the delivery time for sprinklers to Bangalore?',
@@ -258,7 +258,7 @@ export default function SprinklerDealerBangalorePage() {
             Share your project details — building type, area, occupancy class, and ceiling heights —
             with our sales team. We will prepare a free BOQ, recommended sprinkler models, and project
             pricing within 24 hours. Call <strong>+91 9787666104</strong> or email{' '}
-            <strong>sales@risertech.in</strong>.
+            <strong>sanjeevi@risertech.in</strong>.
           </p>
         </div>
       </section>
@@ -327,11 +327,11 @@ export default function SprinklerDealerBangalorePage() {
               Call +91 9787666104
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              sanjeevi@risertech.in
             </Link>
           </div>
         </div>

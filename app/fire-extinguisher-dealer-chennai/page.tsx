@@ -121,7 +121,7 @@ export default function FireExtinguisherDealerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
               <Mail className="w-4 h-4" /> Get a Quote
             </Link>
           </div>
@@ -215,8 +215,8 @@ export default function FireExtinguisherDealerChennaiPage() {
             <Link href="tel:+919787666104" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
               <Phone className="w-4 h-4" /> +91 9787666104
             </Link>
-            <Link href="mailto:sales@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
-              <Mail className="w-4 h-4" /> sales@risertech.in
+            <Link href="mailto:sanjeevi@risertech.in" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              <Mail className="w-4 h-4" /> sanjeevi@risertech.in
             </Link>
           </div>
         </div>
