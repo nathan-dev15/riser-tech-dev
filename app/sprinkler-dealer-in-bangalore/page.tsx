@@ -1,7 +1,7 @@
 ﻿import { Metadata } from 'next';
 import Link from 'next/link';
 import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
-import { Phone, Mail, Award, Shield, CheckCircle, Droplet, MapPin, Truck } from 'lucide-react';
+import { Phone, Mail, Award, Shield, CheckCircle, Droplet, MapPin, Truck , ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Sprinkler Dealer in Bangalore | Fire Sprinkler Supplier Bengaluru — Riser Technologies',
@@ -133,6 +133,25 @@ export default function SprinklerDealerBangalorePage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-amber-500 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { value: '500+', label: 'Projects Delivered' },
+              { value: '12+', label: 'Years Experience' },
+              { value: 'UL / FM', label: 'Approved Products' },
+              { value: 'Pan-India', label: 'Supply' },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-xl sm:text-2xl font-extrabold text-black">{s.value}</div>
+                <div className="text-xs font-semibold text-black/70 uppercase tracking-wide">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Why choose */}
       <section className="py-14 bg-white dark:bg-gray-900">
@@ -269,15 +288,17 @@ export default function SprinklerDealerBangalorePage() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-gray-900 dark:text-white">
             FAQ — Sprinkler Dealer in Bangalore
           </h2>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {faqs.map((faq) => (
-              <div
-                key={faq.q}
-                className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6"
-              >
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{faq.q}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{faq.a}</p>
-              </div>
+              <details key={faq.q} className="group bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  {faq.q}
+                  <ChevronDown className="w-4 h-4 text-amber-500 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+                <div className="px-6 pb-5 border-t border-gray-100 dark:border-gray-700">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed pt-4">{faq.a}</p>
+                </div>
+              </details>
             ))}
           </div>
         </div>
@@ -318,20 +339,23 @@ export default function SprinklerDealerBangalorePage() {
             Contact Riser Technologies for competitive pricing, fast delivery, and free NFPA 13 design
             support for your Bangalore project.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
             <Link
               href="tel:+919787666104"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors"
             >
               <Phone className="w-4 h-4" />
-              Call +91 9787666104
+              +91 9787666104
+            </Link>
+            <Link href="https://wa.me/919787666104" className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+              WhatsApp
             </Link>
             <Link
               href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sanjeevi@risertech.in
+              Email Us
             </Link>
           </div>
         </div>
