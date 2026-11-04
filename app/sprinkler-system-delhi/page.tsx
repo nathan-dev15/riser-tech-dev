@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
-import { Phone, Mail, Award, Shield, CheckCircle, Star, MapPin } from 'lucide-react';
+import { Phone, Mail, Shield, Star, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Sprinkler System Delhi | Fire Sprinkler System Supplier Delhi NCR — Riser Technologies',

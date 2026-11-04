@@ -38,25 +38,25 @@ const extinguisherTypes = [
   {
     icon: Flame,
     name: 'CO₂ Fire Extinguisher',
-    type: 'Class B &amp; C fires',
+    type: 'Class B & C fires',
     desc: 'Carbon dioxide extinguishers for electrical fires, server rooms, control panels, and liquid fires. No residue — suitable for sensitive equipment. Available in 2 kg, 4.5 kg, 6.5 kg, and 22.5 kg. ISI marked per IS 2878.',
   },
   {
     icon: Award,
     name: 'ABC Dry Powder Extinguisher',
-    type: 'Class A, B &amp; C fires',
+    type: 'Class A, B & C fires',
     desc: 'Multi-purpose dry chemical extinguishers for solid, liquid, and electrical fires. Standard choice for offices, factories, and vehicles. Available in 1 kg, 2 kg, 4 kg, 6 kg, 9 kg, and 25 kg. ISI marked per IS 15683.',
   },
   {
     icon: FileCheck,
     name: 'Clean Agent Extinguisher',
-    type: 'Class B &amp; C fires',
+    type: 'Class B & C fires',
     desc: 'Halocarbon (HFC-236fa, HFC-227ea) or inert gas extinguishers for data centres, server rooms, museums, and sensitive equipment where no residue is acceptable. Zero ozone depletion potential.',
   },
   {
     icon: Flame,
     name: 'Foam (AFFF) Extinguisher',
-    type: 'Class A &amp; B fires',
+    type: 'Class A & B fires',
     desc: 'Aqueous Film Forming Foam extinguishers for flammable liquid fires — petrol, diesel, solvents. Standard choice for fuel storage, workshops, and industrial areas. Available in 9 L and 50 L. ISI marked per IS 13386.',
   },
   {
@@ -138,7 +138,7 @@ export default function FireExtinguisherDealerChennaiPage() {
               <div key={e.name} className="p-5 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-amber-400 transition-colors">
                 <e.icon className="w-6 h-6 text-amber-500 mb-2" />
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{e.name}</h3>
-                <span className="text-xs font-medium text-amber-600" dangerouslySetInnerHTML={{ __html: e.type }} />
+                <span className="text-xs font-medium text-amber-600">{e.type}</span>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{e.desc}</p>
               </div>
             ))}
