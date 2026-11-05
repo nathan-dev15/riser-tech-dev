@@ -1,7 +1,7 @@
 ﻿import { Metadata } from 'next';
 import Link from 'next/link';
 import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
-import { Phone, Mail, Award, Shield, CheckCircle, Droplet, MapPin, Truck } from 'lucide-react';
+import { Phone, Mail, Award, Shield, CheckCircle, Droplet, MapPin, Truck , ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Sprinkler Dealer in Mumbai | Fire Sprinkler Supplier Mumbai Maharashtra — Riser Technologies',
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'How do I order sprinklers for a Mumbai or Pune project?',
-    a: 'Call us at +91 9787666104 or email sales@risertech.in with your project details — building type, area, occupancy, and ceiling height. Our team will provide a free BOQ, design support, and competitive project pricing within 24 hours.',
+    a: 'Call us at +91 9787666104 or email sanjeevi@risertech.in with your project details — building type, area, occupancy, and ceiling height. Our team will provide a free BOQ, design support, and competitive project pricing within 24 hours.',
   },
   {
     q: 'What is the delivery time for sprinklers to Mumbai?',
@@ -139,6 +139,25 @@ export default function SprinklerDealerMumbaiPage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-amber-500 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { value: '500+', label: 'Projects Delivered' },
+              { value: '12+', label: 'Years Experience' },
+              { value: 'UL / FM', label: 'Approved Products' },
+              { value: 'Pan-India', label: 'Supply' },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-xl sm:text-2xl font-extrabold text-black">{s.value}</div>
+                <div className="text-xs font-semibold text-black/70 uppercase tracking-wide">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Benefits */}
       <section className="py-14 bg-white dark:bg-gray-900">
@@ -269,15 +288,17 @@ export default function SprinklerDealerMumbaiPage() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-gray-900 dark:text-white">
             FAQ — Sprinkler Dealer in Mumbai
           </h2>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {faqs.map((faq) => (
-              <div
-                key={faq.q}
-                className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6"
-              >
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{faq.q}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{faq.a}</p>
-              </div>
+              <details key={faq.q} className="group bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  {faq.q}
+                  <ChevronDown className="w-4 h-4 text-amber-500 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+                <div className="px-6 pb-5 border-t border-gray-100 dark:border-gray-700">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed pt-4">{faq.a}</p>
+                </div>
+              </details>
             ))}
           </div>
         </div>
@@ -308,6 +329,23 @@ export default function SprinklerDealerMumbaiPage() {
         </div>
       </section>
 
+      <section className="py-10 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium">Related pages:</p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: 'Reliable Dealers India', href: '/reliable-sprinkler-dealers-india' },
+              { label: 'Sprinkler Dealer Chennai', href: '/sprinkler-dealer-in-chennai' },
+              { label: 'Fire Sprinkler Supplier India', href: '/fire-sprinkler-supplier-india' },
+              { label: 'Sprinkler System Delhi', href: '/sprinkler-system-delhi' },
+              { label: 'All Products', href: '/products' },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="text-sm text-amber-600 hover:text-amber-700 underline underline-offset-2">{l.label}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-14 bg-slate-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,20 +356,23 @@ export default function SprinklerDealerMumbaiPage() {
             Contact Riser Technologies for competitive pricing, fast delivery, and free NFPA 13
             design support for your Mumbai or Maharashtra project.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
             <Link
               href="tel:+919787666104"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg transition-colors"
             >
               <Phone className="w-4 h-4" />
-              Call +91 9787666104
+              +91 9787666104
+            </Link>
+            <Link href="https://wa.me/919787666104" className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+              WhatsApp
             </Link>
             <Link
-              href="mailto:sales@risertech.in"
+              href="mailto:sanjeevi@risertech.in"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sales@risertech.in
+              Email Us
             </Link>
           </div>
         </div>
