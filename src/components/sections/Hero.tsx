@@ -209,7 +209,7 @@ export function Hero() {
                     fill
                     className="object-cover"
                     priority={index === 0}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                    sizes="100vw"
                     onError={() => {
                       console.warn(`Failed to load image for slide ${slide.id}: ${slide.image}`);
                       handleImageError(slide.id);
@@ -221,7 +221,7 @@ export function Hero() {
                         return newErrors;
                       });
                     }}
-                    quality={90}
+                    quality={75}
                     unoptimized={process.env.NODE_ENV === 'development'}
                   />
                 </motion.div>

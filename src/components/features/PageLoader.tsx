@@ -32,8 +32,8 @@ export function PageLoader() {
       document.body.style.overflow = '';
     };
 
-    // Minimum display time: 2.5 seconds to ensure loader is visible
-    const MIN_DISPLAY_TIME = 2500;
+    // Minimum display time: enough for brand visibility without hurting LCP
+    const MIN_DISPLAY_TIME = 500;
     const EXIT_DURATION = 400; // Reduced to overlap with content fade-in
     
     if (document.readyState === 'complete') {
@@ -113,8 +113,8 @@ export function PageLoader() {
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
+                    delay: index * 0.03,
+                    duration: 0.25,
                     type: 'spring',
                     stiffness: 200,
                   }}
