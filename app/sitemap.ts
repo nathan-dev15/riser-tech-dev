@@ -263,6 +263,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Fire sprinklers and accessories pages
+    {
+      url: `${baseUrl}/fire-sprinklers-and-accessories`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/fire-sprinklers-and-accessories-chennai`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/fire-sprinklers-and-accessories-india`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
     // Fire suppression system pages
     {
       url: `${baseUrl}/reliable-fire-suppression-system-chennai`,
