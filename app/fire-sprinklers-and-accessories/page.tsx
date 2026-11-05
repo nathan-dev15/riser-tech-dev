@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { LocalBusinessSchema, BreadcrumbSchema, FAQPageSchema } from '@/components/seo/StructuredData';
 import { Phone, Mail, Shield, Star, Award, CheckCircle, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fire Sprinklers and Accessories | Riser Technologies',
     description: 'Authorized supplier of fire sprinklers and all accessories — ESFR, concealed, pendent, valves, pipe fittings. UL Listed, FM Approved. +91 9787666104.',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/fire-sprinklers-and-accessories`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'}/fire-sprinklers-and-accessories`,
     type: 'website',
   },
 };
@@ -69,6 +69,7 @@ export default function FireSprinklersAndAccessoriesPage() {
         { name: 'Home', url: '/' },
         { name: 'Fire Sprinklers and Accessories', url: '/fire-sprinklers-and-accessories' },
       ]} />
+      <FAQPageSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} />
 
       <section className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-red-950 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero/hero-1.jpg')] bg-cover bg-center opacity-15" />
@@ -135,7 +136,8 @@ export default function FireSprinklersAndAccessoriesPage() {
       </section>
 
       <section className="py-14 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose dark:prose-invert prose-headings:font-bold prose-a:text-amber-600 max-w-none">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose dark:prose-invert prose-headings:font-bold prose-a:text-amber-600 max-w-none">
           <h2>Authorized Supplier of Fire Sprinkler Accessories</h2>
           <p>
             Riser Technologies is the authorized Indian distributor for{' '}
@@ -151,6 +153,7 @@ export default function FireSprinklersAndAccessoriesPage() {
             underwriter requirements. We supply to consultants, contractors, and end-users across
             Chennai, Tamil Nadu, and pan-India.
           </p>
+          </div>
         </div>
       </section>
 
@@ -160,7 +163,7 @@ export default function FireSprinklersAndAccessoriesPage() {
           <div className="space-y-3">
             {faqs.map((faq) => (
               <details key={faq.q} className="group bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer [&::-webkit-details-marker]:hidden font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                   {faq.q}
                   <ChevronDown className="w-4 h-4 text-amber-500 shrink-0 transition-transform duration-200 group-open:rotate-180" />
                 </summary>
