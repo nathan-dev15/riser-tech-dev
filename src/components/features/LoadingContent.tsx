@@ -1,30 +1,35 @@
 'use client';
 
 import { useLoading } from '@/contexts/LoadingContext';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 
 export function LoadingContent({ children }: { children: ReactNode }) {
   const { isLoading } = useLoading();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (!isLoading) {
+      requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+      });
+    }
+  }, [isLoading]);
 
   return (
-    <AnimatePresence mode="wait">
-      {!isLoading && (
-        <motion.div
-          key="content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-          style={{ 
-            minHeight: '100vh',
-            backgroundColor: 'var(--background, #f9fafb)' // Match page background to prevent white flash
-          }}
-        >
-          {children}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      ref={ref}
+      style={{
+        opacity: 0,
+        visibility: 'hidden',
+        transition: 'opacity 0.4s ease-in-out',
+        minHeight: '100vh',
+        backgroundColor: 'var(--background, #f9fafb)',
+      }}
+    >
+      {children}
+    </div>
   );
 }
-
