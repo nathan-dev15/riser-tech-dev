@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { OrganizationSchema, BreadcrumbSchema, FAQPageSchema } from '@/components/seo/StructuredData';
 import { Phone, Mail, Shield, Star, Award, CheckCircle, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fire Sprinklers and Accessories India | Pan-India Supplier — Riser Technologies',
     description: 'Pan-India supplier of UL Listed, FM Approved fire sprinklers and accessories. Reliable brand. Supply to all major cities. NFPA 13. +91 9787666104.',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/fire-sprinklers-and-accessories-india`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in'}/fire-sprinklers-and-accessories-india`,
     type: 'website',
   },
 };
@@ -75,11 +75,12 @@ const faqs = [
 export default function FireSprinklersAndAccessoriesIndiaPage() {
   return (
     <>
-      <LocalBusinessSchema />
+      <OrganizationSchema />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
         { name: 'Fire Sprinklers and Accessories India', url: '/fire-sprinklers-and-accessories-india' },
       ]} />
+      <FAQPageSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} />
 
       <section className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-red-950 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero/hero-1.jpg')] bg-cover bg-center opacity-15" />
@@ -163,7 +164,8 @@ export default function FireSprinklersAndAccessoriesIndiaPage() {
       </section>
 
       <section className="py-14 bg-white dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose dark:prose-invert prose-headings:font-bold prose-a:text-amber-600 max-w-none">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose dark:prose-invert prose-headings:font-bold prose-a:text-amber-600 max-w-none">
           <h2>Authorized Pan-India Supplier of Fire Sprinklers and Accessories</h2>
           <p>
             Riser Technologies is the authorized Indian distributor for{' '}
@@ -178,6 +180,7 @@ export default function FireSprinklersAndAccessoriesIndiaPage() {
             comply with NBC 2016 requirements and carry TAC-recognized UL and FM approvals required
             by Indian insurance underwriters.
           </p>
+          </div>
         </div>
       </section>
 
@@ -187,7 +190,7 @@ export default function FireSprinklersAndAccessoriesIndiaPage() {
           <div className="space-y-3">
             {faqs.map((faq) => (
               <details key={faq.q} className="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer [&::-webkit-details-marker]:hidden font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                   {faq.q}
                   <ChevronDown className="w-4 h-4 text-amber-500 shrink-0 transition-transform duration-200 group-open:rotate-180" />
                 </summary>
