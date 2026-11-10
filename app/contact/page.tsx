@@ -3,10 +3,16 @@
 import { Contact } from '@/components/sections/Contact';
 import Image from 'next/image';
 import Link from 'next/link';
+import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <LocalBusinessSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/contact' },
+      ]} />
       <section className="relative pt-24 pb-12 md:pt-28 md:pb-16 min-h-[233px] md:min-h-[329px] lg:min-h-[383px] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
