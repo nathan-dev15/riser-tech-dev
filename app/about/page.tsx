@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Card } from '@/components/ui/Card';
 import { Card3D } from '@/components/ui/Card3D';
 import { CheckCircle, Users, Award, Shield } from 'lucide-react';
@@ -6,6 +7,21 @@ import Link from 'next/link';
 import { TeamSection } from '@/components/sections/TeamSection';
 import { WinningSteps } from '@/components/sections/WinningSteps';
 import { OrganizationSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+
+export const metadata: Metadata = {
+  title: 'About Riser Technologies | Authorized Reliable Sprinkler Dealer Chennai',
+  description: 'Riser Technologies — 12+ years of fire safety expertise in Chennai. Authorized dealer for Reliable Automatic Sprinkler Co. (USA). Certified professionals delivering NFPA 13 compliant fire protection systems across Tamil Nadu and India.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Riser Technologies | Authorized Reliable Sprinkler Dealer Chennai',
+    description: '12+ years of fire safety expertise. Authorized dealer for Reliable Automatic Sprinkler Co. (USA) in India. UL/FM Approved sprinkler systems across Tamil Nadu.',
+    url: '/about',
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'About Riser Technologies' }],
+  },
+};
 
 export default function AboutPage() {
   return (

@@ -1,26 +1,20 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Sprinkler Dealer in Chennai | Get Sprinkler Quote Tamil Nadu — Riser Technologies',
-  description: 'Contact Riser Technologies — Sprinkler Dealer & Distributor in Chennai. Get sprinkler in Chennai Tamil Nadu at best price. Call +91 9787666104 for free consultation on fire sprinkler systems.',
-  keywords: [
-    'contact sprinkler dealer in chennai',
-    'contact sprinkler supplier chennai',
-    'get sprinkler in chennai tamil nadu',
-    'fire sprinkler near me',
-    'sprinkler near me chennai',
-    'sprinkler distributors in chennai near me',
-    'pendent sprinkler dealers in chennai near me',
-    'upright sprinkler dealers in chennai near me',
-    'fire sprinkler company contact tamil nadu',
-    'sprinkler installation enquiry india',
-    'fire safety contact chennai',
-    'get sprinkler quote chennai',
-    'fire protection enquiry tamil nadu',
-    'fire fighting equipment supplier chennai',
-  ],
+  title: 'Contact Riser Technologies | Fire Sprinkler Dealer Chennai — +91 9787666104',
+  description: 'Contact Riser Technologies — Chennai\'s authorized fire sprinkler dealer. Call +91 9787666104, email sales@risertech.in, or visit us. Get a quote for sprinkler systems, fire extinguishers & wet riser systems across Tamil Nadu.',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contact Riser Technologies | Fire Sprinkler Dealer Chennai',
+    description: 'Get in touch for fire sprinkler systems, ESFR sprinklers, fire extinguishers & wet riser systems. Authorized Reliable dealer in Chennai. Call +91 9787666104.',
+    url: '/contact',
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Contact Riser Technologies Chennai' }],
+  },
 };
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return children;
 }

@@ -225,10 +225,10 @@ export const metadata: Metadata = {
       'Authorised Indian distributor of Reliable Fire Sprinklers (USA). UL/FM/LPCB certified fire sprinkler systems, ESFR storage, DDX pre-action & LB11 Li-ion sprinklers. Chennai.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Riser Technologies — Reliable Sprinkler Distributor India, Chennai',
+        alt: 'Riser Technologies — Authorized Reliable Sprinkler Dealer in Chennai, India',
       },
     ],
   },
@@ -236,7 +236,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sprinkler Systems Chennai | UL/FM Fire Sprinklers Tamil Nadu India — Riser Technologies',
     description: 'Expert fire safety solutions in Chennai. Fire alarms, extinguishers, emergency lighting & more.',
-    images: ['/twitter-image.jpg'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
@@ -250,8 +250,8 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add your verification codes here
-    // google: 'your-google-verification-code',
+    // Paste your code from Google Search Console → Settings → Ownership verification → HTML tag
+    // google: 'PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE',
   },
 };
 
