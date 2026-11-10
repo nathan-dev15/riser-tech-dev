@@ -161,7 +161,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative mt-20 h-[500px] overflow-hidden z-0"
+      className="relative mt-20 h-[420px] sm:h-[500px] overflow-hidden z-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -277,7 +277,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 md:py-12 lg:py-16 text-center w-full h-[500px] flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 md:py-12 lg:py-16 text-center w-full h-[420px] sm:h-[500px] flex flex-col justify-center">
         {/* Badge - Static, no re-animation */}
         <div className="flex justify-center mb-1.5 sm:mb-3.5 md:mb-4.5 lg:mb-5.5">
           <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 max-w-[85%] sm:max-w-none">

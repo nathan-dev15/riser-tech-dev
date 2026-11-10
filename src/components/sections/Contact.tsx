@@ -9,10 +9,10 @@ export function Contact() {
     <section className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <LensHeading as="h2" className="text-4xl font-bold mb-4" magnify={2.5}>
+          <LensHeading as="h2" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" magnify={2.5}>
             Contact Us
           </LensHeading>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Your safety partner is just a call away. Get in touch with us for expert fire safety solutions.
           </p>
         </div>

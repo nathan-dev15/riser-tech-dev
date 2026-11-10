@@ -1,22 +1,19 @@
 import { logVisitor, logEnquiry } from '@/lib/logger';
 import { VisitorData, EnquiryData } from '@/types';
-import fs from 'fs';
-import path from 'path';
-
-jest.mock('fs');
 
 describe('Logger', () => {
-  const logsDir = path.join(process.cwd(), 'logs');
+  let consoleSpy: jest.SpyInstance;
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    (fs.existsSync as jest.Mock).mockReturnValue(true);
-    (fs.mkdirSync as jest.Mock).mockImplementation(() => {});
-    (fs.appendFileSync as jest.Mock).mockImplementation(() => {});
+    consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    consoleSpy.mockRestore();
   });
 
   describe('logVisitor', () => {
-    it('should log visitor data to file', () => {
+    it('should log visitor data to console', () => {
       const visitorData: VisitorData = {
         ip: '192.168.1.1',
         location: 'Test City',
@@ -33,16 +30,14 @@ describe('Logger', () => {
 
       logVisitor(visitorData);
 
-      expect(fs.appendFileSync).toHaveBeenCalled();
-      const callArgs = (fs.appendFileSync as jest.Mock).mock.calls[0];
-      expect(callArgs[0]).toContain('visitors-');
-      expect(callArgs[1]).toContain('192.168.1.1');
-      expect(callArgs[1]).toContain('Chrome');
+      expect(consoleSpy).toHaveBeenCalled();
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.type).toBe('visitor');
+      expect(loggedData.ip).toBe('192.168.1.1');
+      expect(loggedData.browser).toBe('Chrome');
     });
 
-    it('should create logs directory if it does not exist', () => {
-      (fs.existsSync as jest.Mock).mockReturnValue(false);
-      
+    it('should include timestamp in logged data', () => {
       const visitorData: VisitorData = {
         ip: '192.168.1.1',
         location: 'Test City',
@@ -58,30 +53,29 @@ describe('Logger', () => {
 
       logVisitor(visitorData);
 
-      expect(fs.mkdirSync).toHaveBeenCalledWith(logsDir, { recursive: true });
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.timestamp).toBeTruthy();
     });
 
-    it('should handle errors gracefully', () => {
-      (fs.appendFileSync as jest.Mock).mockImplementation(() => {
-        throw new Error('File write error');
-      });
-
+    it('should sanitize log input containing newlines', () => {
       const visitorData: VisitorData = {
         ip: '192.168.1.1',
-        location: 'Test City',
-        browser: 'Chrome',
+        location: 'Test\nCity',
+        browser: 'Chrome\r\nBot',
         os: 'Windows',
         device: 'Desktop',
         page: '/home',
-        referrer: 'https://google.com',
+        referrer: '',
         userAgent: 'Mozilla/5.0',
         language: 'en',
         timestamp: '2025-01-15T10:00:00Z',
       };
 
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
-      expect(() => logVisitor(visitorData)).not.toThrow();
-      consoleSpy.mockRestore();
+      logVisitor(visitorData);
+
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.location).not.toContain('\n');
+      expect(loggedData.browser).not.toContain('\r');
     });
 
     it('should handle missing optional fields', () => {
@@ -99,12 +93,15 @@ describe('Logger', () => {
 
       logVisitor(visitorData);
 
-      expect(fs.appendFileSync).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalled();
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.location).toBe('');
+      expect(loggedData.timezone).toBe('');
     });
   });
 
   describe('logEnquiry', () => {
-    it('should log enquiry data to file', () => {
+    it('should log enquiry data to console', () => {
       const enquiryData: EnquiryData = {
         name: 'John Doe',
         email: 'john@example.com',
@@ -115,15 +112,15 @@ describe('Logger', () => {
 
       logEnquiry(enquiryData, 'Email Sent');
 
-      expect(fs.appendFileSync).toHaveBeenCalled();
-      const callArgs = (fs.appendFileSync as jest.Mock).mock.calls[0];
-      expect(callArgs[0]).toContain('enquiries-');
-      expect(callArgs[1]).toContain('John Doe');
-      expect(callArgs[1]).toContain('john@example.com');
-      expect(callArgs[1]).toContain('Email Sent');
+      expect(consoleSpy).toHaveBeenCalled();
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.type).toBe('enquiry');
+      expect(loggedData.name).toBe('John Doe');
+      expect(loggedData.email).toBe('john@example.com');
+      expect(loggedData.status).toBe('Email Sent');
     });
 
-    it('should handle optional fields in enquiry', () => {
+    it('should use default text for optional fields', () => {
       const enquiryData: EnquiryData = {
         name: 'Jane Doe',
         email: 'jane@example.com',
@@ -132,31 +129,26 @@ describe('Logger', () => {
 
       logEnquiry(enquiryData, 'Logged Only');
 
-      expect(fs.appendFileSync).toHaveBeenCalled();
-      const callArgs = (fs.appendFileSync as jest.Mock).mock.calls[0];
-      expect(callArgs[1]).toContain('Not specified');
-      expect(callArgs[1]).toContain('No message');
+      expect(consoleSpy).toHaveBeenCalled();
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.service).toBe('Not specified');
+      expect(loggedData.message).toBe('No message');
     });
 
-    it('should handle errors gracefully', () => {
-      (fs.appendFileSync as jest.Mock).mockImplementation(() => {
-        throw new Error('File write error');
-      });
-
+    it('should sanitize enquiry fields with special characters', () => {
       const enquiryData: EnquiryData = {
-        name: 'John Doe',
+        name: 'John\nDoe',
         email: 'john@example.com',
         contact: '1234567890',
       };
 
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
-      expect(() => logEnquiry(enquiryData, 'Logged')).not.toThrow();
-      consoleSpy.mockRestore();
+      logEnquiry(enquiryData, 'Logged');
+
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.name).not.toContain('\n');
     });
 
-    it('should create logs directory if it does not exist', () => {
-      (fs.existsSync as jest.Mock).mockReturnValue(false);
-      
+    it('should include timestamp in logged enquiry', () => {
       const enquiryData: EnquiryData = {
         name: 'John Doe',
         email: 'john@example.com',
@@ -165,7 +157,8 @@ describe('Logger', () => {
 
       logEnquiry(enquiryData, 'Logged');
 
-      expect(fs.mkdirSync).toHaveBeenCalledWith(logsDir, { recursive: true });
+      const loggedData = JSON.parse(consoleSpy.mock.calls[0][0]);
+      expect(loggedData.timestamp).toBeTruthy();
     });
   });
 });
