@@ -23,6 +23,16 @@ export const metadata: Metadata = {
     'fire protection services tamil nadu',
     'fire system inspection india',
   ],
+  alternates: {
+    canonical: '/services',
+  },
+  openGraph: {
+    title: 'Fire Sprinkler System Services in Chennai | Riser Technologies',
+    description: 'Professional fire sprinkler installation, maintenance & inspection in Chennai. NFPA 13 compliant. Fire Sprinkler, Wet Riser, Fire Extinguisher services. Call +91 9787666104.',
+    url: '/services',
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Fire Safety Services Chennai — Riser Technologies' }],
+  },
 };
 import { Card } from '@/components/ui/Card';
 import { Button3D } from '@/components/ui/Button3D';
