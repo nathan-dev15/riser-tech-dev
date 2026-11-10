@@ -31,7 +31,12 @@ export function OrganizationSchema() {
     '@type': 'Organization',
     name: COMPANY_INFO.name,
     url: baseUrl,
-    logo: `${baseUrl}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/logo.png`,
+      width: 112,
+      height: 112,
+    },
     description: 'Leading fire safety solutions provider in Chennai. Expert fire alarm installation, fire extinguishers, emergency lighting & fire protection services.',
     address: {
       '@type': 'PostalAddress',
@@ -279,8 +284,6 @@ export function ServiceSchema({
  * For FAQ sections
  */
 export function FAQPageSchema({ faqs }: { faqs: Array<{ question: string; answer: string }> }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
-  
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
