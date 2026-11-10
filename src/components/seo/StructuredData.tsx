@@ -31,7 +31,12 @@ export function OrganizationSchema() {
     '@type': 'Organization',
     name: COMPANY_INFO.name,
     url: baseUrl,
-    logo: `${baseUrl}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/logo.png`,
+      width: 112,
+      height: 112,
+    },
     description: 'Leading fire safety solutions provider in Chennai. Expert fire alarm installation, fire extinguishers, emergency lighting & fire protection services.',
     address: {
       '@type': 'PostalAddress',
@@ -148,11 +153,11 @@ export function LocalBusinessSchema() {
       '@type': 'OfferCatalog',
       name: 'Fire Sprinkler Systems & Equipment Chennai',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'ESFR Sprinkler in Chennai' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Pendent Sprinkler Chennai' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Upright Sprinkler Chennai' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Concealed Sprinkler Chennai' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Fire Extinguisher Chennai' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ESFR Sprinkler Supply in Chennai' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pendent Sprinkler Supply Chennai' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Upright Sprinkler Supply Chennai' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Concealed Sprinkler Supply Chennai' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fire Extinguisher Supply Chennai' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wet Riser System Installation Chennai' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fire Sprinkler System Installation Chennai' } },
       ],
@@ -188,9 +193,11 @@ export function ProductSchema({ product, category }: { product: Product; categor
     offers: {
       '@type': 'Offer',
       url: productUrl,
+      price: 0,
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
       priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      description: 'Contact us for pricing',
       seller: {
         '@type': 'Organization',
         name: COMPANY_INFO.name,
@@ -198,8 +205,8 @@ export function ProductSchema({ product, category }: { product: Product; categor
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '50',
+      ratingValue: 4.8,
+      reviewCount: 50,
     },
     additionalProperty: product.features.map((feature) => ({
       '@type': 'PropertyValue',
@@ -277,8 +284,6 @@ export function ServiceSchema({
  * For FAQ sections
  */
 export function FAQPageSchema({ faqs }: { faqs: Array<{ question: string; answer: string }> }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risertech.in';
-  
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
