@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { LocalBusinessSchema, BreadcrumbSchema , FAQPageSchema } from '@/components/seo/StructuredData';
 import { Phone, Mail, Award, Shield, CheckCircle, Star, Flame, Droplet, Zap , ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -114,6 +114,8 @@ export default function ReliableDelugeSystemChennaiPage() {
         { name: 'Home', url: '/' },
         { name: 'Reliable Deluge System Chennai', url: '/reliable-deluge-system-chennai' },
       ]} />
+      <FAQPageSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} />
+
 
       {/* Hero */}
       <section className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-orange-950 to-slate-800 overflow-hidden">
