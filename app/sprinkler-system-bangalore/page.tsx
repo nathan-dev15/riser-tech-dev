@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { LocalBusinessSchema, BreadcrumbSchema , FAQPageSchema } from '@/components/seo/StructuredData';
 import { Phone, Mail, Shield, Star, MapPin, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -70,6 +70,8 @@ export default function SprinklerSystemBangalorePage() {
         { name: 'Home', url: '/' },
         { name: 'Sprinkler System Bangalore', url: '/sprinkler-system-bangalore' },
       ]} />
+      <FAQPageSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} />
+
 
       <section className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero/hero-1.jpg')] bg-cover bg-center opacity-15" />
