@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { LocalBusinessSchema, BreadcrumbSchema , FAQPageSchema } from '@/components/seo/StructuredData';
 import { Phone, Mail, Award, Shield, CheckCircle, Star , ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -73,6 +73,8 @@ export default function AuthorizedSprinklerDistributorChennaiPage() {
           { name: 'Authorized Sprinkler Distributor in Chennai', url: '/authorized-sprinkler-distributor-in-chennai' },
         ]}
       />
+      <FAQPageSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} />
+
 
       {/* Hero */}
       <section className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden">
