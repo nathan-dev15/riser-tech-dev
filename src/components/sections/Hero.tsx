@@ -187,7 +187,7 @@ export function Hero() {
               className="absolute inset-0"
               style={{
                 zIndex: isActive ? 1 : 0,
-                willChange: 'opacity',
+                willChange: (isActive || isNext) ? 'opacity' : 'auto',
               }}
             >
               {/* Background Image — only current + next to avoid loading all 11 at once */}
@@ -196,10 +196,10 @@ export function Hero() {
                   className="absolute inset-0"
                   initial={false}
                   animate={{
-                    scale: isActive ? [1.1, 1] : 1.05,
+                    scale: (isActive && index !== 0) ? [1.1, 1] : 1,
                   }}
                   transition={{
-                    duration: isActive ? 5 : 1,
+                    duration: (isActive && index !== 0) ? 5 : 0,
                     ease: 'linear',
                   }}
                 >
