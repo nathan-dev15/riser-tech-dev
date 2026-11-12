@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+﻿import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from '@/components/providers/AppProviders';
@@ -250,9 +250,15 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add your verification codes here
-    // google: 'your-google-verification-code',
+    // Paste your code from Google Search Console → Settings → Ownership verification → HTML tag
+    // google: 'PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#f59e0b',
 };
 
 export default function RootLayout({
@@ -262,6 +268,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Preconnect to self origin for faster resource fetching */}
+        <link rel="preconnect" href="https://risertech.in" />
+        <link rel="dns-prefetch" href="//wa.me" />
+      </head>
       <body className="antialiased">
         <AppProviders>{children}</AppProviders>
       </body>
