@@ -32,10 +32,11 @@ export function ScrollToTop() {
   return (
     <Button3D
       onClick={scrollToTop}
+      aria-label="Scroll to top"
       className="fixed bottom-8 right-8 z-40 p-3 rounded-full shadow-2xl"
       size="sm"
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="w-5 h-5" aria-hidden="true" />
     </Button3D>
   );
 }
