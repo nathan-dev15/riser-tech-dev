@@ -34,9 +34,9 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
-      // Long-term cache for other static assets
+      // Long-term cache for other static assets (fonts)
       {
-        source: '/:path*\\.(:ext(jpg|jpeg|png|gif|webp|avif|svg|ico|woff|woff2|ttf|otf))',
+        source: '/:path*\\.(woff|woff2|ttf|otf|eot)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
