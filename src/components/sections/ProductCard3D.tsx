@@ -132,7 +132,7 @@ export function ProductCard3D({
         )}
         {imageError && (
           <div className="absolute inset-x-0 inset-y-2 sm:inset-y-3 md:inset-y-4 flex items-center justify-center">
-            <div className="text-gray-400 text-xs sm:text-sm text-center p-4">
+            <div className="text-gray-500 text-xs sm:text-sm text-center p-4">
               Image not available
             </div>
           </div>
