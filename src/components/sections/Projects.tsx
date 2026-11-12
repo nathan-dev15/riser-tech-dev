@@ -178,7 +178,7 @@ function ProjectCard({
                   {project.stats.clients}
                           </span>
                         </div>
-              <span className="text-xs text-gray-400">•</span>
+              <span className="text-xs text-gray-500">•</span>
                           <span className="text-xs text-gray-500 dark:text-gray-400">
                             {project.stats.completed}
                           </span>
