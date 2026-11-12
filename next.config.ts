@@ -17,20 +17,35 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // swcMinify is enabled by default in Next.js 16+
 
-  // Security Headers (additional to middleware)
+  // Security + Cache Headers
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
+      },
+      // Long-term cache for static images (1 year, immutable)
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // Long-term cache for other static assets
+      {
+        source: '/:path*\\.(:ext(jpg|jpeg|png|gif|webp|avif|svg|ico|woff|woff2|ttf|otf))',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // JS/CSS chunks — versioned by Next.js, safe to cache long-term
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
